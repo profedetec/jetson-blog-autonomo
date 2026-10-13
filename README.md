@@ -1,5 +1,7 @@
 # Publicación autónoma de blog científico desde una Jetson Nano
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23353297.svg)](https://doi.org/10.5281/zenodo.23353297)
+
 Sistema que, sin intervención humana, elige noticias de tecnología publicadas en
 X (antes Twitter), redacta un artículo de divulgación científica en español con
 un modelo de lenguaje y lo publica en un blog. Corre con `cron` en una NVIDIA
@@ -76,3 +78,7 @@ python3 analysis/metricas_corridas.py ruta/a/blog_cron.log
 ## Licencia
 
 MIT. Ver [LICENSE](LICENSE).
+
+## Cómo citar
+
+Galicia, S. (2026). *jetson-blog-autonomo: sistema autónomo de publicación de blog científico en una Jetson Nano* (Versión 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23353297

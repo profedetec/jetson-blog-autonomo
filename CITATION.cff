@@ -7,6 +7,7 @@ authors:
     given-names: Sergio
     affiliation: Universidad Autónoma de Guadalajara
 license: MIT
+doi: 10.5281/zenodo.23353297
 repository-code: "https://github.com/profedetec/jetson-blog-autonomo"
 version: 1.0.0
 date-released: 2026-10-13
