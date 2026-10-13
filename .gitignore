@@ -1,0 +1,12 @@
+# Secretos
+config.json
+.env
+# Datos y registros generados en ejecución
+*.log
+*.sqlite
+*.bak*
+data/*
+!data/.gitkeep
+__pycache__/
+*.pyc
+*.orig

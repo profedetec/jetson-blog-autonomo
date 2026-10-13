@@ -1,0 +1,18 @@
+{
+  "blog_url": "https://example.com/blog",
+  "admin_url": "https://example.com/modules/blog/admin",
+  "login_url": "https://example.com/admin/login.php",
+  "credentials": {
+    "rol": "NOMBRE_DE_USUARIO",
+    "pass": "CONTRASEÑA"
+  },
+  "article_style": "cientifico-profesional",
+  "language": "es",
+  "seleccion_modo": "coherente",
+  "redaccion_proveedor": "google",
+  "google_api_key": "TU_API_KEY_DE_GOOGLE_AI_STUDIO",
+  "google_models": ["gemini-2.5-flash", "gemma-4-31b-it", "gemma-4-26b-a4b-it"],
+  "openrouter_api_key": "OPCIONAL_RESPALDO_OPENROUTER",
+  "openrouter_models": ["google/gemma-4-31b-it:free"],
+  "redaccion_presupuesto_seg": 900
+}
