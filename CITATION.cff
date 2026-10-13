@@ -3,9 +3,10 @@ message: "Si usa este software, cítelo con los siguientes metadatos."
 title: "jetson-blog-autonomo: sistema autónomo de publicación de blog científico en una Jetson Nano"
 type: software
 authors:
-  - family-names: Galicia
-    given-names: Sergio
+  - family-names: Galicia Guajardo
+    given-names: Sergio Iván
     affiliation: Universidad Autónoma de Guadalajara
+    orcid: "https://orcid.org/0009-0008-0224-9770"
 license: MIT
 doi: 10.5281/zenodo.23353297
 repository-code: "https://github.com/profedetec/jetson-blog-autonomo"
