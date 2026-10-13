@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Si usa este software, cítelo con los siguientes metadatos."
+title: "jetson-blog-autonomo: sistema autónomo de publicación de blog científico en una Jetson Nano"
+type: software
+authors:
+  - family-names: Galicia
+    given-names: Sergio
+    affiliation: Universidad Autónoma de Guadalajara
+license: MIT
+repository-code: "https://github.com/profedetec/jetson-blog-autonomo"
+version: 1.0.0
+date-released: 2026-10-13
+keywords:
+  - edge computing
+  - Jetson Nano
+  - large language models
+  - science communication

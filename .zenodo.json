@@ -1,0 +1,22 @@
+{
+  "title": "jetson-blog-autonomo: sistema autónomo de publicación de blog científico en una Jetson Nano",
+  "description": "Sistema que, sin intervención humana, selecciona noticias de tecnología publicadas en X, redacta artículos de divulgación científica en español con modelos de lenguaje (Gemini/Gemma) y los publica en un blog. Corre con cron en una NVIDIA Jetson Nano (2020). Copia saneada del sistema en producción que acompaña un artículo académico en preparación.",
+  "upload_type": "software",
+  "language": "spa",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Galicia, Sergio",
+      "affiliation": "Universidad Autónoma de Guadalajara"
+    }
+  ],
+  "keywords": [
+    "edge computing",
+    "Jetson Nano",
+    "large language models",
+    "automated journalism",
+    "science communication",
+    "divulgación científica",
+    "inteligencia artificial"
+  ]
+}
