@@ -61,9 +61,27 @@ Ejemplo de `crontab`:
 
 ## Reproducir las métricas
 
+`data/` contiene la copia congelada que usa el artículo (corte: 13-oct-2026 12:00):
+
+| Ruta | Contenido |
+|---|---|
+| `data/operacion/blog_cron.log` | Log de cron, 20-ago al 13-oct (rutas locales reemplazadas por `~`) |
+| `data/operacion/blog-published.json` | Ledger: 169 artículos y sus fuentes |
+| `data/operacion/net-wait.log` | Arranques sin red |
+| `data/anotacion/PROTOCOLO.md` | Protocolo de anotación de exactitud factual |
+| `data/anotacion/muestra.json` | Muestra de 30 artículos (semilla 20261014); tuits solo con id, cuenta y fecha |
+| `data/anotacion/articulos/` | Texto de los 30 artículos evaluados |
+| `data/anotacion/etiquetas_A_ciegas.json` | Anotador A (LLM) antes de la adjudicación |
+| `data/anotacion/etiquetas_A_consenso.json` | Anotador A tras la adjudicación (1 cambio: A28 #3) |
+| `data/anotacion/etiquetas_B.csv` | Anotador B (autor), 10 artículos, sin ver las etiquetas de A |
+| `data/anotacion/adjudicacion.md` | Desacuerdos y decisión de consenso |
+
 ```bash
-python3 analysis/metricas_corridas.py ruta/a/blog_cron.log
+python3 analysis/metricas_corridas.py data/operacion/blog_cron.log   # tablas de operación y latencia
+python3 analysis/acuerdo.py                                         # exactitud y acuerdo entre anotadores
 ```
+
+`metricas_corridas.py` acepta un segundo argumento con otro corte (`'AAAA-MM-DD HH:MM'`).
 
 ## Notas técnicas relevantes
 

@@ -7,6 +7,10 @@ config.json
 *.bak*
 data/*
 !data/.gitkeep
+# Copia congelada usada en el artículo (20-ago al 13-oct-2026)
+!data/operacion/
+!data/operacion/*.log
+!data/anotacion/
 __pycache__/
 *.pyc
 *.orig

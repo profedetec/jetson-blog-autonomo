@@ -1,7 +1,17 @@
+"""Métricas de corridas a partir de blog_cron.log.
+Uso: python3 metricas_corridas.py blog_cron.log [CORTE]
+CORTE ('AAAA-MM-DD HH:MM', por defecto el del artículo) descarta el log desde esa
+marca de tiempo, para que las cifras no cambien mientras el sistema sigue corriendo."""
 import re,sys,statistics as st,collections
 from datetime import datetime
+CORTE=sys.argv[2] if len(sys.argv)>2 else '2026-10-13 12:00'
+def lineas():
+    for line in open(sys.argv[1],errors='replace'):
+        if re.match(r'\d{4}-\d\d-\d\d \d\d:\d\d',line) and line[:16]>=CORTE: return
+        yield line
+print('corte del log:',CORTE)
 runs=[];cur=None
-for line in open(sys.argv[1],errors='replace'):
+for line in lineas():
     m=re.match(r'(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)',line)
     ts=datetime.strptime(m.group(1),'%Y-%m-%d %H:%M:%S') if m else None
     if 'SALON DE TEC' in line:
@@ -41,14 +51,18 @@ for o in ('redacción insuficiente','login/red'):
 print('primer',runs[0]['start'],'ultimo',runs[-1]['start'])
 print('--- duraciones reales')
 runs2=[];cur=None
-for line in open(sys.argv[1],errors='replace'):
+for line in lineas():
     m=re.match(r'(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)',line)
     ts=datetime.strptime(m.group(1),'%Y-%m-%d %H:%M:%S') if m else None
-    if 'SALON DE TEC' in line: cur={'s':ts,'p2':None,'p3':None,'p4':None,'pub':None};runs2.append(cur);continue
+    if 'SALON DE TEC' in line: cur={'s':ts,'p2':None,'p3':None,'p4':None,'pub':None,'refresh':True};runs2.append(cur);continue
+    if cur and 'omitido (--no-refresh)' in line: cur['refresh']=False
     if not cur or not ts: continue
     for k,pat in (('p2','Paso 2'),('p3','Paso 3'),('p4','Paso 4'),('pub','Artículo publicado')):
         if pat in line and cur[k] is None: cur[k]=ts
-ok=[r for r in runs2 if r['pub'] and r['p2'] and r['p3'] and r['p4']]
+# solo corridas de cron publicadas (mismo criterio que arriba): las manuales con
+# --no-refresh no tienen fase de refresco y sesgarían los tiempos
+ok=[r for r in runs2 if r['pub'] and r['p2'] and r['p3'] and r['p4']
+    and r['s'].minute<=1 and r['s'].hour in (0,6,12,18) and r['refresh']]
 def q(xs):
     xs=sorted(xs); return 'n=%d mediana %.1f media %.1f p90 %.1f max %.1f'%(len(xs),st.median(xs),st.mean(xs),xs[int(.9*len(xs))],xs[-1])
 print('total (min)',q([(r['pub']-r['s']).total_seconds()/60 for r in ok]))

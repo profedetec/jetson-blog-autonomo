@@ -1,0 +1,1736 @@
+{
+ "A01": [
+  {
+   "afirmacion": "OpenAI anunció una reducción del 20 % en precios de API y créditos de GPT-5.6 Sol",
+   "etiqueta": "D",
+   "fuente": "F1",
+   "nota": "La fuente dice 'by over 20%'; el artículo lo fija en 20 %"
+  },
+  {
+   "afirmacion": "La reducción estará vigente tres meses",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El anuncio busca equilibrar la expansión de capacidades con mejoras de eficiencia",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "Paráfrasis de 'push the frontier... while improving efficiency'"
+  },
+  {
+   "afirmacion": "Google DeepMind presenta los videojuegos como banco de pruebas de su investigación en IA",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Sus agentes pasaron de dominar Atari a alcanzar nivel experto en StarCraft II",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": "'Grandmaster' → 'niveles de expertise'"
+  },
+  {
+   "afirmacion": "El proyecto SIMA logró avances en la comprensión de mundos 3D",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Estudiantes universitarios de EE. UU. reciben un año gratis de Google AI Pro",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Estudiantes de más de 140 países reciben un año gratis de Google AI Plus",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  }
+ ],
+ "A02": [
+  {
+   "afirmacion": "AMD Instinct MI455X se basa en la arquitectura CDNA 5",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "La fuente menciona MI455X y CDNA 5 juntos"
+  },
+  {
+   "afirmacion": "ServeTheHome analizó el MI455X a fondo",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El análisis destaca avances en memoria, ancho de banda y empaquetado",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El análisis menciona avances a escala de rack",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Falcon 9 despegó desde California y puso 27 satélites Starlink en órbita",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Fue el lanzamiento número 100 de Falcon en el año",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "NVIDIA Vera Rubin entra en producción completa",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "NVIDIA felicitó a los equipos de Microsoft por el hito",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Vera Rubin es hardware especializado de NVIDIA y Microsoft para aplicaciones astronómicas",
+   "etiqueta": "EI",
+   "fuente": "F3",
+   "nota": "Vera Rubin es la plataforma de GPU de NVIDIA para centros de datos de IA; el nombre homenajea a la astrónoma. Error repetido en el resumen y el cierre"
+  }
+ ],
+ "A03": [
+  {
+   "afirmacion": "Los tres anuncios se publicaron en X el 21 de agosto de 2026",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Una funcionalidad de OpenAI está disponible en la API y se despliega en planes elegibles de créditos de ChatGPT Work y Codex",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El tuit de OpenAI enlaza a la documentación oficial de precios de la API",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "Enlace entregado al modelo"
+  },
+  {
+   "afirmacion": "El uso de las suscripciones Pro, Plus y Business no cambia",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El tuit de OpenAI obtuvo 824 me gusta, 72 respuestas y 42 retuits",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "Coincide con la base (24-ago 08:30)"
+  },
+  {
+   "afirmacion": "Ankr lanzó infraestructura RPC de grado institucional para el XRP Ledger",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Ofrece respuestas de nodos verificables y endpoints dedicados para desarrolladores empresariales",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El tuit de CoinDesk obtuvo 705 me gusta, 28 respuestas y 140 retuits",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": "Coincide con la base"
+  },
+  {
+   "afirmacion": "Sus retuits superan a los de las otras dos fuentes",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": "140 frente a 42 y 21"
+  },
+  {
+   "afirmacion": "RPC es un protocolo para que una aplicación solicite servicios o ejecute procedimientos en un servidor remoto",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": "Definición estándar"
+  },
+  {
+   "afirmacion": "La selección automática de modelos tiene 30 % de descuento para usuarios de Copilot Max",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Copilot elige entre Claude, GPT o Microsoft AI",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "No requiere código ni activación (opt-in)",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El tuit de GitHub obtuvo 302 me gusta, 37 respuestas y 21 retuits",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": "Coincide con la base"
+  },
+  {
+   "afirmacion": "Claude es de Anthropic y GPT de OpenAI",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  }
+ ],
+ "A04": [
+  {
+   "afirmacion": "Los anuncios de @elonmusk y @nvidia se publicaron el 24 de agosto de 2026",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "SpaceX y Nvidia diseñaron en conjunto un Vera Rubin NVL72 optimizado para el espacio",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Su lanzamiento a órbita está previsto para el cuarto trimestre del año siguiente",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Ese trimestre corresponde al último de 2027",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "Inferencia correcta a partir de la fecha del tuit"
+  },
+  {
+   "afirmacion": "Se proyecta una escala significativa en 2028",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Nvidia presenta a Vera como la primera CPU construida para agentes",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "SpaceX despliega Vera para orquestación, ejecución de código y procesamiento de datos de su IA agentiva",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Nvidia dice que Vera mantiene alimentadas las GPU y hace que los agentes actúen rápido",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El mensaje de Nvidia menciona fábricas de IA de gigavatios",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Son las primeras mediciones de Vera Rubin en silicio sobre cargas reales de agentes",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Ofrece hasta 30 veces más throughput por megavatio que GB300 NVL72",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Ofrece hasta 35 veces menos costo por token que GB300 NVL72",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Las sesiones agentivas no se parecen a cargas de chat o resumen",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "En las sesiones agentivas el contexto crece a lo largo de la sesión",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": "Visible en el texto truncado"
+  },
+  {
+   "afirmacion": "El sistema conjunto es un Vera Rubin NVL42",
+   "etiqueta": "D",
+   "fuente": "F1",
+   "nota": "La fuente dice NVL72; el artículo lo cambia en la conclusión (inconsistencia interna)"
+  }
+ ],
+ "A05": [
+  {
+   "afirmacion": "SpaceX y OpenAI publicaron sus anuncios el 25 de agosto de 2026",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "SpaceX presentó Starbase, en Luisiana, un sitio de lanzamiento de alta cadencia",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Starbase permitirá que Starship abra un camino a las estrellas para la humanidad",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "SpaceX agradeció al gobernador de Luisiana, Jeff Landry, y a la gente del estado",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "@LAGovJeffLandry"
+  },
+  {
+   "afirmacion": "Starbase, Luisiana, soportará miles de vuelos de Starship al año",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Las misiones irán a la órbita terrestre, la Luna, Marte y más allá",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Jalapeño es el primer chip de inferencia propio de OpenAI",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "OpenAI ha probado el chip y el sistema que lo rodea desde que lo anunció",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Las pruebas muestran más inteligencia por vatio y respuestas más rápidas",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Logra mayor throughput y menor latencia en una misma arquitectura",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  }
+ ],
+ "A06": [
+  {
+   "afirmacion": "Los tres comunicados se publicaron en X el 27 de agosto de 2026",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "NVIDIA Vera llega a AWS",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "NVIDIA entregó el primer servidor Vera CPU y la GPU Vera Rubin en la sede de AWS en Seattle",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "La entrega la hizo Ian Buck de NVIDIA a Willem Visser y Supreeth Sheshadri de AWS",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Vera está diseñada específicamente para IA agentiva",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Vera ofrece más tokens por dólar y resultados más rápidos",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Gemini Omni 1.1 Flash es el modelo multimodal más nuevo de Google para generar y editar video",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Ofrece nuevas capacidades y controles creativos para desarrolladores",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Permite extender escenas, fijar fotogramas inicial y final y añadir video",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Starship se cargó en un barco semisumergible para un viaje de varios meses de regreso a Starbase",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El equipo de recuperación trabajó en condiciones difíciles",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "La recuperación da a los ingenieros acceso a gran cantidad de datos",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  }
+ ],
+ "A07": [
+  {
+   "afirmacion": "El anuncio de Anthropic es del 28 de agosto de 2026",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El estudio pertenece a un programa llamado 'New Fellows Research'",
+   "etiqueta": "D",
+   "fuente": "F1",
+   "nota": "La fuente dice 'New Fellows Research:' (nueva investigación de los Fellows); el artículo convierte 'New' en parte del nombre"
+  },
+  {
+   "afirmacion": "La investigación exploró si Claude puede alinear de forma autónoma a otras IA",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Claude recibió 48 horas y una GPU para mejorar la alineación de modelos pequeños",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Claude investigó y propuso métodos, y luego entrenó y probó los modelos por sí mismo",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El resultado fue sorprendentemente bueno",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Claude es un modelo de IA de Anthropic",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El 25 de agosto, SpaceX llevó el Booster 21 a la plataforma de Starbase",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El traslado es para pruebas de fuego estático antes del Vuelo 14",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Las pruebas de fuego estático verifican el funcionamiento y la seguridad de los componentes antes del lanzamiento",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El 27 de agosto, CoinDesk informó que Ripple Prime lanzó Delta One",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Delta One permite a clientes institucionales negociar Total Return Swaps sobre acciones de EE. UU., índices y activos digitales",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Opera con una única contraparte que tiene más de 1000 millones de dólares de capital regulatorio",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El servicio opera 24/7",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  }
+ ],
+ "A08": [
+  {
+   "afirmacion": "El anuncio de OpenAI es del 29 de agosto de 2026",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "OpenAI termina su asociación con Cursor tras la adquisición de Cursor por SpaceX",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El acceso directo de Cursor a los modelos de OpenAI terminaría el 12 de noviembre",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "La fuente: 'under our proposal'; el artículo usa condicional"
+  },
+  {
+   "afirmacion": "OpenAI expresa preocupación por los desarrolladores que usan sus modelos en Cursor",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El 28 de agosto, SpaceX hizo un fuego estático de duración completa con los 33 motores del Super Heavy, en preparación del Vuelo 14",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Circle es el patrocinador principal de la camiseta del Chelsea FC",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Es la primera firma de servicios financieros cripto con patrocinio frontal de camiseta en la Premier League",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  }
+ ],
+ "A09": [
+  {
+   "afirmacion": "Google fue nombrado Líder en el Magic Quadrant 2026 de Gartner para plataformas de aplicaciones nativas en la nube",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Según Google Cloud, eso valida su misión de ofrecer una plataforma accesible y centrada en desarrolladores",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "En el Magic Quadrant, los 'Líderes' ejecutan bien su visión actual y están bien posicionados para el futuro",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": "Definición de Gartner"
+  },
+  {
+   "afirmacion": "'Nativo en la nube' designa aplicaciones diseñadas para aprovechar la escalabilidad y resiliencia de la nube",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Google DeepMind está desplegando Gemini Omni 1.1 Flash",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Hace el video generativo más controlable, más rápido de iterar y más pulido para producción",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Se puede probar en Flow by Google y otras plataformas",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Los ETF al contado de Solana tuvieron su racha más fuerte registrada",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Tuvieron 138 millones de dólares de entradas netas en 10 días",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El máximo de un solo día fue de 47 millones de dólares, el martes",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "BSOL de Bitwise lidera el segmento",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "BSOL tiene 9.3 millones de dólares en SOL",
+   "etiqueta": "D",
+   "fuente": "F3",
+   "nota": "La fuente dice 9.3 millones de SOL (unidades), no de dólares"
+  },
+  {
+   "afirmacion": "BSOL superó los 1000 millones de dólares de AUM y es el primer ETF de Solana en lograrlo",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Un ETF es un producto financiero regulado",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  }
+ ],
+ "A10": [
+  {
+   "afirmacion": "El 29 de agosto, GitHub anunció novedades en Issues: vistas ancladas, avatares en reacciones, densidad del tablero, ocultar sub-issues cerrados y una API REST de dependencias",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El tuit de GitHub tuvo 333 me gusta, 44 respuestas y 43 retuits",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "Coincide con la base"
+  },
+  {
+   "afirmacion": "El 1 de septiembre, Anthropic publicó la investigación 'Training a Misaligned Reward Seeker'",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El tuit de Anthropic tuvo 1340 me gusta, 110 respuestas y 121 retuits",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": "Coincide con la base"
+  },
+  {
+   "afirmacion": "La investigación aborda la preocupación de que el reward hacking enseñe al modelo a buscar recompensas por cualquier medio",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Para estudiarlo a escala, Anthropic entrenó un modelo",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": "El texto truncado no dice cuál"
+  },
+  {
+   "afirmacion": "SpaceX publicó el 30 de agosto sobre el telescopio espacial Roman de la NASA",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El tuit de SpaceX tuvo 1604 me gusta, 35 respuestas y 135 retuits",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": "Coincide con la base"
+  },
+  {
+   "afirmacion": "Los sondeos amplios y rápidos de Roman mapearán galaxias, hallarán exoplanetas y generarán grandes volúmenes de datos diarios",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  }
+ ],
+ "A11": [
+  {
+   "afirmacion": "Meta lanzó Muse Spark 1.3 con mejor rendimiento en tareas agénticas y de programación",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Muse Spark 1.3 se enfoca en la usabilidad en el mundo real",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Sostiene trabajo de horizonte largo en varios flujos dentro de un solo hilo",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Colabora más activamente con los usuarios y les hace preguntas",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "Visible en el texto truncado ('it asks')"
+  },
+  {
+   "afirmacion": "Gemini 3.8 Flash ofrece ganancias sustanciales sobre Gemini 3.7 Flash",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "A menudo se acerca al rendimiento de modelos frontera más costosos",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Google destaca fiabilidad y precisión que se pueden escalar de forma asequible",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El anuncio menciona su rendimiento en DeepSWE v1.1",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El Departamento de Comercio de EE. UU. publica en cadena datos oficiales de PIB, PCE y otras cifras económicas mediante Chainlink",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Los datos llegan a 10 blockchains en vivo, conforme se publican",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  }
+ ],
+ "A12": [
+  {
+   "afirmacion": "El 1 de septiembre, Salesforce informó que 104 billones de registros de clientes entraron a Data 360 el trimestre anterior",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": "'trillion' → 'billones' (escala larga), correcto"
+  },
+  {
+   "afirmacion": "El volumen aumentó 355 % interanual",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Salesforce dice que el volumen nunca fue la parte difícil",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Un artículo de opinión en CNBC sostiene que los datos son el foso defensivo en la era de la IA",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El 2 de septiembre, Google presentó Gemini 3.8 Flash Cyber, un modelo especializado para defensores",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El 2 de septiembre, CoinDesk informó que los ministros de finanzas y gobernadores de bancos centrales del G20 se comprometieron a marcos regulatorios más claros para activos digitales y stablecoins",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  }
+ ],
+ "A13": [
+  {
+   "afirmacion": "El Banco de Pagos Internacionales publicó un documento que usa el XRP Ledger como prueba de concepto para verificar estadísticas oficiales en cadena",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El BPI destaca las bajas comisiones del XRPL",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El BPI destaca su liquidación de 3 a 5 segundos",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El BPI destaca su historial probado",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "No se ha tomado ninguna decisión de adopción",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Google DeepMind y Google Research presentaron WeatherNext 3, su modelo de IA meteorológica global más avanzado y preciso",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "WeatherNext 3 usa datos satelitales en tiempo real para pronósticos horarios de alta resolución",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Ofrece pronóstico preciso de precipitación y variables de energía limpia",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "OpenAI compartió el clip 'Put That There', cortesía de MIT Media Laboratory, Chris Schmandt y Eric Hulteen",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El clip refleja una colaboración o alianza entre OpenAI y el MIT Media Lab",
+   "etiqueta": "D",
+   "fuente": "F3",
+   "nota": "La fuente es solo un crédito de autoría del clip; el artículo construye una sección sobre 'colaboraciones'. Además, la fuente casi no tiene contenido noticioso: falla de selección"
+  }
+ ],
+ "A14": [
+  {
+   "afirmacion": "Los tres comunicados se publicaron el mismo día",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": "4 de septiembre"
+  },
+  {
+   "afirmacion": "GPT-6 Astra está disponible para usuarios Pro, Enterprise y Business Premium en ChatGPT Work y Codex",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "GPT-6 Astra también está activo en la API",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El despliegue para usuarios Plus y Business puede tardar algunos días",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Claude completó la primera prueba formalizada del Último Teorema de Fermat",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Verificar una prueba matemática importante puede llevar años; formalizarla para asistentes como Lean ayuda",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Lyria 3.5, el modelo musical de mejor sonido de Google, está disponible en la app Gemini",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Ofrece voces más expresivas y arreglos más ricos",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Incluye plantillas nuevas para impulsar la creatividad",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Permite elegir la duración de las creaciones",
+   "etiqueta": "EN",
+   "fuente": "F3",
+   "nota": "El texto visible termina en '⌛ Choose to create'; el modelo infirió 'duración' del emoji"
+  }
+ ],
+ "A15": [
+  {
+   "afirmacion": "Nvidia afirmó el 3 de septiembre que los modelos abiertos son esenciales para ampliar el acceso a la IA",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Nvidia ayudará a Hugging Face a escalar su plataforma y comunidad, preservando apertura, neutralidad y elección",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Google amplió su Google AI Educator Series, formación gratuita y bajo demanda en habilidades prácticas de IA para educadores",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Habrá módulos nuevos el primer miércoles de cada mes",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Brad Garlinghouse, CEO de Ripple, dijo que hacer de EE. UU. la capital cripto del mundo está al alcance",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Lo dijo menos de dos semanas antes de la votación de clotura del Senado sobre la Ley CLARITY, el 15 de septiembre",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  }
+ ],
+ "A16": [
+  {
+   "afirmacion": "DBS y Citi completaron el primer pago transfronterizo en dólares en fin de semana entre Singapur y EE. UU.",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El pago se hizo mediante Swift Digital Ledger",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Se liquidó en minutos, cuando tradicionalmente tarda hasta dos días hábiles",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Microsoft publicó su Reporte de Transparencia de IA Responsable 2026",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El reporte describe cómo refuerza su gobernanza y evoluciona su Estándar de IA Responsable para la era de la IA agéntica",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Crecen las dudas sobre CLARITY, el proyecto de ley de estructura del mercado cripto",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "La disputa de Kalshi sobre mercados de predicción se encamina a la Corte Suprema",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "21 bancos globales desafían a Circle y Tether",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  }
+ ],
+ "A17": [
+  {
+   "afirmacion": "El 10 de septiembre, Nvidia anunció que trabaja con Palantir en modelos abiertos para cadenas de suministro",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Según Alex Neefus de NVIDIA, ayudan a detectar interrupciones antes, evaluar escenarios más rápido y decidir con más información",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El enfoque mantiene la experiencia humana en el centro",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Nvidia usa la frase 'de la oblea al primer token'",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El 11 de septiembre, CoinDesk informó que Ripple lleva agentes de IA a la gestión de tesorería corporativa",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Hay un nuevo borrador de la Ley CLARITY antes de una votación clave en el Senado",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Kalshi busca ofrecer futuros perpetuos 24/7 sobre acciones como Tesla y Nvidia",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Revolut expuso datos KYC (documentos de identidad, selfies e historiales de transacciones de Bitcoin) tras atender una solicitud gubernamental falsificada",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "No se perdieron fondos, pero aumentó el riesgo de phishing para los usuarios de mayor patrimonio",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "KYC significa 'Conozca a su Cliente'",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  }
+ ],
+ "A18": [
+  {
+   "afirmacion": "El 10 de septiembre, OpenAI anunció que incluye datos financieros premium de Daloopa, PitchBook y LSEG News",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": "La fuente es un fragmento de hilo sin nombre de producto"
+  },
+  {
+   "afirmacion": "El 10 de septiembre, Google AI publicó la frase 'And then… upon conquering the financial world. Moved on to… robotics?'",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "Fuente sin contenido noticioso (teaser): falla de selección"
+  },
+  {
+   "afirmacion": "Clearpool propone migrar al XRP Ledger y crear productos de crédito institucional con los próximos estándares de préstamo de XRPL",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Ripple se compromete a invertir en productos de rendimiento de XRP y RLUSD",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "RLUSD es una moneda estable",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  }
+ ],
+ "A19": [
+  {
+   "afirmacion": "Los anuncios fueron publicados por @CoinDesk y @Grayscale",
+   "etiqueta": "D",
+   "fuente": "F1-F3",
+   "nota": "Las tres fuentes son de CoinDesk; Grayscale solo aparece mencionado. Atribución errónea, repetida en el resumen"
+  },
+  {
+   "afirmacion": "Los hechos ocurrieron en un lapso de dos días",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": "13 y 14 de septiembre"
+  },
+  {
+   "afirmacion": "Trump aceptó las restricciones éticas de la Ley CLARITY, que lo cubren a él, a funcionarios electos y a jueces",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Los fiscales generales estatales tendrán autoridad para hacerlas cumplir",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Eso elimina el último obstáculo para la votación del Senado del martes",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Una publicación anterior del mismo 14 de septiembre informó del nuevo borrador",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": "F2 es de las 08:35 y F1 de las 09:25"
+  },
+  {
+   "afirmacion": "Los republicanos del Senado publicaron un nuevo borrador con 126 cambios pedidos por los demócratas",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El borrador incluye restricciones éticas para Trump y su familia",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Incluye un 'disyuntor' para stablecoins que protege a los bancos comunitarios",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Grayscale solicitó convertir su Litecoin Trust en un ETF al contado en NYSE Arca, con el símbolo LTCN",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "La cotización depende de que la SEC apruebe una solicitud 19b-4 pendiente",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "La SEC es la Comisión de Bolsa y Valores de EE. UU.",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Un ETF al contado da exposición al precio del activo sin poseerlo directamente",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  }
+ ],
+ "A20": [
+  {
+   "afirmacion": "Tesla compartió el 21 de septiembre el testimonio de un usuario de Full Self-Driving",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El usuario usó FSD en más del 90 % de sus trayectos desde el sábado por la mañana",
+   "etiqueta": "D",
+   "fuente": "F1",
+   "nota": "La fuente dice '90%+ of my miles' (millas recorridas), no trayectos"
+  },
+  {
+   "afirmacion": "El usuario la describe como 'literalmente mágica' y dice que manejó situaciones mejor de lo que él lo habría hecho",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Nvidia felicitó a Einride por llevar la próxima generación de Einride Driver a autopistas y vías suburbanas",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Se trata de camiones autónomos",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Einride Driver está construido sobre NVIDIA Hyperion",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Google presentó Googlebook, una nueva categoría de laptop, en preventa desde ese día",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Tiene pantallas táctiles OLED 2.8K y 14 horas de batería",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Se sincroniza con teléfonos Android",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  }
+ ],
+ "A21": [
+  {
+   "afirmacion": "Los anuncios se publicaron el 23 de septiembre de 2026",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Claude descubrió un sistema enzimático desconocido en el ADN de bacteriófagos",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Junto al gen de la enzima hay una larga serie de ADN repetitivo parecida a CRISPR",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Anthropic aún no comprende qué hace el sistema",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Es el primer resultado del nuevo laboratorio de biología molecular de Anthropic, donde biólogos usan Claude",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Claude analiza datos y literatura para generar hipótesis y sistemas biológicos candidatos",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "OpenAI muestra con MentalHealthBench que los modelos frontera mejoraron en conversaciones realistas de salud mental",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "MentalHealthBench es un benchmark abierto construido con aportes de más de 80 clínicos",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "OpenAI lo publica abiertamente para que otros investigadores lo examinen",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "CRISPR ha tenido un gran impacto en la edición genética",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  }
+ ],
+ "A22": [
+  {
+   "afirmacion": "El 24 de septiembre, el personal de la CFTC actualizó sus preguntas frecuentes sobre cripto: fondos de clientes en activos tokenizados y uso de blockchain para llevar registros",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "CFTC es la Comisión de Comercio de Futuros de Productos Básicos",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Su presidente, Michael Selig, dice que los cambios buscan dar claridad regulatoria",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "SpaceX entrenará a la tripulación Crew-14 de la NASA, que volará en Dragon con un Falcon 9 la próxima primavera",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Es parte de la colaboración continua entre una empresa privada y una agencia gubernamental para transportar astronautas",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": "Programa de tripulación comercial"
+  },
+  {
+   "afirmacion": "CEPI, la OMS África y el INRB usan Claude para acelerar la respuesta a un brote de una variante inusual de ébola en la RD del Congo",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El anuncio enlaza a un documento con más detalle",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  }
+ ],
+ "A23": [
+  {
+   "afirmacion": "Los comunicados se publicaron entre el 24 y el 26 de septiembre de 2026",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Google presentó tres funciones nuevas de Chrome para que los estudiantes gestionen su carga, se preparen para exámenes y aprovechen el semestre",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Google está integrando capacidades agénticas en herramientas de uso diario",
+   "etiqueta": "D",
+   "fuente": "F1",
+   "nota": "La fuente no menciona agentes ni IA; el artículo lo matiza al principio, pero lo afirma como hecho en la conclusión"
+  },
+  {
+   "afirmacion": "Brian Armstrong, CEO de Coinbase, dijo que los agentes seguirán creciendo y que las criptomonedas y stablecoins serán su medio de pago preferido",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "AMD presentó Helios como 'lo que se necesita para ejecutar IA agéntica a escala'",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Helios tiene más de 18 000 unidades de cómputo GPU CDNA 5, 4600 núcleos Zen 6 y 31 TB de HBM4 en un solo rack",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El anuncio se enmarca en #AdvancingAI con Lisa Su",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  }
+ ],
+ "A24": [
+  {
+   "afirmacion": "Los anuncios se publicaron a principios de octubre de 2026",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": "1 y 2 de octubre"
+  },
+  {
+   "afirmacion": "GPT-6 Astra Ultrafast de OpenAI corre en NVIDIA y es hasta 8 veces más rápido",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Grok Build incorpora un nuevo Agent Dashboard con todos los agentes en una pantalla",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Se activa con el comando /dashboard",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El 2 de octubre, Google publicó un resumen de sus mayores novedades de IA de septiembre",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "Fuente casi sin contenido (solo anuncia el hilo): falla de selección"
+  },
+  {
+   "afirmacion": "Google publica un resumen mensual de sus novedades de IA",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": "Práctica real del blog de Google; la fuente no lo dice"
+  }
+ ],
+ "A25": [
+  {
+   "afirmacion": "Las primeras etapas del Falcon 9 y los propulsores laterales del Falcon Heavy regresarán a zonas de aterrizaje en Florida y California unos ocho minutos después de cada despegue",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Su llegada se anunciará con un estampido sónico",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Falcon Heavy lanzará la misión NROL-97 de la NRO y la USSF desde la plataforma 39A en Florida, a las 11:53 p. m. ET",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El clima era 60 % favorable para el despegue",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Ambos anuncios de SpaceX son del 1 de octubre de 2026",
+   "etiqueta": "R",
+   "fuente": "F1, F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Según CoinDesk, Tether devolverá USDT a Bitcoin este mes mediante Utexo",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Incluirá transferencias privadas, intercambios directos BTC-USDT y préstamos respaldados por BTC",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "La mayoría de los datos quedarán fuera del registro público de Bitcoin",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  }
+ ],
+ "A26": [
+  {
+   "afirmacion": "GitHub anunció la llegada de Git 2.56",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "git add --resolved prepara solo las rutas que ya no tienen marcadores de conflicto y rechaza las que aún los tienen",
+   "etiqueta": "D",
+   "fuente": "F2",
+   "nota": "La fuente dice que prepara solo las rutas aún marcadas como en conflicto, y se niega si quedan marcadores; el artículo omite la restricción a rutas en conflicto"
+  },
+  {
+   "afirmacion": "Un caso de merge-base bajó de 0.68 s a 0.01 s",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Git es software de código abierto",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  },
+  {
+   "afirmacion": "OKX e ICE, matriz de NYSE, solicitaron a la SEC lanzar OKXICE, una plataforma de acciones tokenizadas de 63 empresas listadas en NYSE",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Blast, una capa 2 de Ethereum, cierra tras caer sus activos 98 % desde un máximo de 2200 millones de dólares",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Blast dice que mantener la red ya cuesta más de lo que genera",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  }
+ ],
+ "A27": [
+  {
+   "afirmacion": "Los tres anuncios se publicaron el mismo día, 8 de octubre de 2026",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "SpaceX acordó adquirir una cartera nacional de licencias de espectro de banda baja",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "La compra permitirá a Starlink convertirse en un operador móvil importante en EE. UU.",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Con ese espectro y la constelación Gen2, Starlink Mobile busca dar acceso a los estadounidenses",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El espectro de banda baja penetra bien en edificios y cubre áreas amplias",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Jensen Huang recibió la Medalla Nacional de Ciencia por impulsar la computación GPU para descubrimientos científicos",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "También fueron premiados Elon Musk, Lisa Su, Michael Dell, Satya Nadella y Sergey Brin",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Lisa Su, presidenta y CEO de AMD, recibió la medalla por sus contribuciones a semiconductores, cómputo de alto rendimiento e innovación estadounidense",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  }
+ ],
+ "A28": [
+  {
+   "afirmacion": "Los anuncios se publicaron el 8 de octubre de 2026",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Anthropic lanzó la Anthropic Cyber Mission para asegurar infraestructura crítica y software de código abierto",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Dragon y la tripulación Crew-12 reentrarán y amerizarán frente a Los Ángeles a las 8:34 a. m. PT de ese día",
+   "etiqueta": "D",
+   "fuente": "F2",
+   "nota": "La fuente dice '~8:34' (aprox.); el artículo fija 'a las 8:34'. Corregido en fase de consenso 2026-10-16 (antes R)"
+  },
+  {
+   "afirmacion": "Samsung agregó transferencias de USDC a Samsung Wallet: los usuarios Galaxy de EE. UU. pueden enviar stablecoins a cuentas bancarias de más de 60 países",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Solana y Sui son los socios de infraestructura blockchain",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  }
+ ],
+ "A29": [
+  {
+   "afirmacion": "El 9 de octubre, Anthropic empezó a publicar informes más frecuentes sobre el comportamiento de sus modelos, además de sus tarjetas de sistema y reportes de riesgo",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El primer informe describe cuatro tipos de comportamiento detectados en evaluaciones y uso interno",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": ""
+  },
+  {
+   "afirmacion": "En esos casos Claude actuó en situaciones reales",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "Visible en el texto truncado ('acted on real')"
+  },
+  {
+   "afirmacion": "El 7 de octubre, Google AI amplió el acceso a SynthID, que verifica si una imagen, video o audio fue generado por IA",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Cualquier persona puede entrar a synthid.com para buscar la marca de agua",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": "La URL venía como documento oficial en los datos entregados al modelo"
+  },
+  {
+   "afirmacion": "Funciona con archivos generados por Google o por socios de la industria",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El 8 de octubre, SpaceX informó que Dragon completó la quema de desorbitación y desechó el tronco",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "La quema de desorbitación reduce la velocidad orbital para iniciar el descenso",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  },
+  {
+   "afirmacion": "El tronco lleva paneles solares y componentes que no se necesitan para la reentrada",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  }
+ ],
+ "A30": [
+  {
+   "afirmacion": "El 10 de octubre de 2026, SpaceX publicó varios anuncios sobre el lanzamiento de la cuarta misión de transporte de datos Tranche 1 para la SDA",
+   "etiqueta": "R",
+   "fuente": "F1-F3",
+   "nota": "Las tres fuentes son de la misma cuenta y el mismo evento: falla de diversidad (anterior a la rotación de dominios)"
+  },
+  {
+   "afirmacion": "@SemperCitiusSDA es la Space Development Agency",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Menos de una hora antes, SpaceX informó que el Falcon 9 despegaría desde California",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Ese anuncio tuvo 2738 me gusta, 228 respuestas y 370 retuits",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": "Coincide con la base"
+  },
+  {
+   "afirmacion": "El clima era 80 % favorable para el despegue",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "La carga de propelente comenzaría en breve",
+   "etiqueta": "R",
+   "fuente": "F2",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Cargar propelente es llenar los tanques del cohete con el combustible",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  },
+  {
+   "afirmacion": "Un comunicado posterior confirmó el lanzamiento",
+   "etiqueta": "D",
+   "fuente": "F1",
+   "nota": "F1 es una invitación a ver la transmisión ('Watch…'), no una confirmación"
+  },
+  {
+   "afirmacion": "Ese comunicado tuvo 5424 me gusta, 387 respuestas y 815 retuits",
+   "etiqueta": "R",
+   "fuente": "F1",
+   "nota": "Coincide con la base"
+  },
+  {
+   "afirmacion": "Un tercer anuncio tuvo 1050 me gusta, 85 respuestas y 155 retuits",
+   "etiqueta": "R",
+   "fuente": "F3",
+   "nota": "Coincide con la base"
+  },
+  {
+   "afirmacion": "La órbita terrestre baja es un destino común de satélites de comunicaciones y observación",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  },
+  {
+   "afirmacion": "La órbita baja reduce la latencia de transmisión de datos",
+   "etiqueta": "EC",
+   "fuente": "-",
+   "nota": ""
+  }
+ ]
+}

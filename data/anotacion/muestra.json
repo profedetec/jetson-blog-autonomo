@@ -1,0 +1,739 @@
+{
+ "semilla": 20261014,
+ "elegibles": 172,
+ "publicados": 172,
+ "muestra": [
+  {
+   "codigo": "A01",
+   "fecha": "2026-08-22T06:32:34",
+   "titulo": "Tendencias en IA: Acceso ampliado, eficiencia y aprendizaje en entornos virtuales",
+   "borrador": "20260822-0632-tendencias-en-ia-acceso-ampliado-eficiencia-y-aprendizaje-en.md",
+   "fuentes": [
+    {
+     "id": "2090885187634905500",
+     "cuenta": "OpenAI",
+     "fecha": "2026-08-21T19:34:10"
+    },
+    {
+     "id": "2090772922818286080",
+     "cuenta": "GoogleDeepMind",
+     "fecha": "2026-08-21T12:08:04"
+    },
+    {
+     "id": "2090165248196252003",
+     "cuenta": "GeminiApp",
+     "fecha": "2026-08-19T19:53:23"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A02",
+   "fecha": "2026-08-23T00:33:14",
+   "titulo": "Avances tecnológicos en cómputo y conectividad: AMD, NVIDIA y SpaceX lideran innovaciones",
+   "borrador": "20260823-0033-avances-tecnol-gicos-en-c-mputo-y-conectividad-amd-nvidia-y.md",
+   "fuentes": [
+    {
+     "id": "2090914360109502942",
+     "cuenta": "AMD",
+     "fecha": "2026-08-21T21:30:05"
+    },
+    {
+     "id": "2091086303068918197",
+     "cuenta": "SpaceX",
+     "fecha": "2026-08-22T08:53:19"
+    },
+    {
+     "id": "2090944279103635481",
+     "cuenta": "nvidia",
+     "fecha": "2026-08-21T23:28:58"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A03",
+   "fecha": "2026-08-24T08:37:18",
+   "titulo": "Infraestructura y automatización: las nuevas capas para el desarrollador profesional",
+   "borrador": "20260824-0837-infraestructura-y-automatizaci-n-las-nuevas-capas-para-el-de.md",
+   "fuentes": [
+    {
+     "id": "2090885188897460249",
+     "cuenta": "OpenAI",
+     "fecha": "2026-08-21T19:34:10"
+    },
+    {
+     "id": "2090823211130765493",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-08-21T15:27:53"
+    },
+    {
+     "id": "2090904529407443399",
+     "cuenta": "github",
+     "fecha": "2026-08-21T20:51:01"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A04",
+   "fecha": "2026-08-24T12:38:03",
+   "titulo": "Vera Rubin en órbita: cuando la IA agentiva deja la superficie terrestre",
+   "borrador": "20260824-1238-vera-rubin-en-rbita-cuando-la-ia-agentiva-deja-la-superficie.md",
+   "fuentes": [
+    {
+     "id": "2091939113008238838",
+     "cuenta": "elonmusk",
+     "fecha": "2026-08-24T17:22:05"
+    },
+    {
+     "id": "2091920680317046847",
+     "cuenta": "nvidia",
+     "fecha": "2026-08-24T16:08:50"
+    },
+    {
+     "id": "2091904062077694153",
+     "cuenta": "nvidia",
+     "fecha": "2026-08-24T15:02:48"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A05",
+   "fecha": "2026-08-26T10:11:23",
+   "titulo": "Infraestructura y Procesamiento: Pilares del Futuro Tecnológico",
+   "borrador": "20260826-1011-infraestructura-y-procesamiento-pilares-del-futuro-tecnol-gi.md",
+   "fuentes": [
+    {
+     "id": "2092284173730144732",
+     "cuenta": "SpaceX",
+     "fecha": "2026-08-25T16:13:14"
+    },
+    {
+     "id": "2092294188494938547",
+     "cuenta": "SpaceX",
+     "fecha": "2026-08-25T16:53:02"
+    },
+    {
+     "id": "2092300846675505602",
+     "cuenta": "OpenAI",
+     "fecha": "2026-08-25T17:19:29"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A06",
+   "fecha": "2026-08-28T00:31:41",
+   "titulo": "Avances Clave en IA, Exploración Espacial y Desarrollo de Contenido Digital",
+   "borrador": "20260828-0031-avances-clave-en-ia-exploraci-n-espacial-y-desarrollo-de-con.md",
+   "fuentes": [
+    {
+     "id": "2092988782622519728",
+     "cuenta": "SpaceX",
+     "fecha": "2026-08-27T14:53:06"
+    },
+    {
+     "id": "2093008576487072064",
+     "cuenta": "Google",
+     "fecha": "2026-08-27T16:11:45"
+    },
+    {
+     "id": "2092960847408583120",
+     "cuenta": "nvidia",
+     "fecha": "2026-08-27T13:02:06"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A07",
+   "fecha": "2026-08-28T12:25:15",
+   "titulo": "Avances en Autonomía y Expansión: IA, Espacio y Finanzas Institucionales",
+   "borrador": "20260828-1225-avances-en-autonom-a-y-expansi-n-ia-espacio-y-finanzas-insti.md",
+   "fuentes": [
+    {
+     "id": "2093386528668172373",
+     "cuenta": "AnthropicAI",
+     "fecha": "2026-08-28T17:13:36"
+    },
+    {
+     "id": "2092372845544321445",
+     "cuenta": "SpaceX",
+     "fecha": "2026-08-25T22:05:35"
+    },
+    {
+     "id": "2092963889063325850",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-08-27T13:14:11"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A08",
+   "fecha": "2026-08-29T00:32:29",
+   "titulo": "La Convergencia de Sectores: Un Análisis de Anuncios Tecnológicos Recientes",
+   "borrador": "20260829-0032-la-convergencia-de-sectores-un-an-lisis-de-anuncios-tecnol-g.md",
+   "fuentes": [
+    {
+     "id": "2093515564786540695",
+     "cuenta": "OpenAI",
+     "fecha": "2026-08-29T01:46:20"
+    },
+    {
+     "id": "2093477720638341395",
+     "cuenta": "SpaceX",
+     "fecha": "2026-08-28T23:15:58"
+    },
+    {
+     "id": "2093324545927119167",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-08-28T13:07:18"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A09",
+   "fecha": "2026-08-31T06:31:13",
+   "titulo": "Innovación y Posicionamiento Tecnológico: Un Análisis de Anuncios Recientes",
+   "borrador": "20260831-0631-innovaci-n-y-posicionamiento-tecnol-gico-un-an-lisis-de-anun.md",
+   "fuentes": [
+    {
+     "id": "2093473703912763440",
+     "cuenta": "GoogleCloud",
+     "fecha": "2026-08-28T23:00:00"
+    },
+    {
+     "id": "2093338200580256172",
+     "cuenta": "GoogleDeepMind",
+     "fecha": "2026-08-28T14:01:34"
+    },
+    {
+     "id": "2093330673033413051",
+     "cuenta": "glassnode",
+     "fecha": "2026-08-28T13:31:39"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A10",
+   "fecha": "2026-09-01T00:31:32",
+   "titulo": "Avances tecnológicos recientes: optimización, investigación y exploración",
+   "borrador": "20260901-0031-avances-tecnol-gicos-recientes-optimizaci-n-investigaci-n-y.md",
+   "fuentes": [
+    {
+     "id": "2093825400178917519",
+     "cuenta": "github",
+     "fecha": "2026-08-29T22:17:31"
+    },
+    {
+     "id": "2094577944056430865",
+     "cuenta": "AnthropicAI",
+     "fecha": "2026-09-01T00:07:51"
+    },
+    {
+     "id": "2094007483769532542",
+     "cuenta": "SpaceX",
+     "fecha": "2026-08-30T10:21:03"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A11",
+   "fecha": "2026-09-02T18:32:18",
+   "titulo": "La convergencia tecnológica impulsa la eficiencia en la ingeniería y las finanzas",
+   "borrador": "20260902-1832-la-convergencia-tecnol-gica-impulsa-la-eficiencia-en-la-inge.md",
+   "fuentes": [
+    {
+     "id": "2095234385129963666",
+     "cuenta": "AIatMeta",
+     "fecha": "2026-09-02T19:36:19"
+    },
+    {
+     "id": "2095105556553875512",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-02T11:04:24"
+    },
+    {
+     "id": "2095193918686077027",
+     "cuenta": "Google",
+     "fecha": "2026-09-02T16:55:31"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A12",
+   "fecha": "2026-09-03T06:25:27",
+   "titulo": "La Convergencia de Datos, IA y Regulación en la Era Digital",
+   "borrador": "20260903-0625-la-convergencia-de-datos-ia-y-regulaci-n-en-la-era-digital.md",
+   "fuentes": [
+    {
+     "id": "2095090142683767011",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-02T10:03:09"
+    },
+    {
+     "id": "2094855340445614360",
+     "cuenta": "salesforce",
+     "fecha": "2026-09-01T18:30:08"
+    },
+    {
+     "id": "2095212784678256901",
+     "cuenta": "Google",
+     "fecha": "2026-09-02T18:10:29"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A13",
+   "fecha": "2026-09-04T12:32:17",
+   "titulo": "Sistemas de precisión digital: De la verificación estadística a la predicción climática",
+   "borrador": "20260904-1232-sistemas-de-precisi-n-digital-de-la-verificaci-n-estad-stica.md",
+   "fuentes": [
+    {
+     "id": "2095855443344048313",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-04T12:44:11"
+    },
+    {
+     "id": "2095529763280466295",
+     "cuenta": "Google",
+     "fecha": "2026-09-03T15:10:03"
+    },
+    {
+     "id": "2095595758967988662",
+     "cuenta": "OpenAI",
+     "fecha": "2026-09-03T19:32:17"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A14",
+   "fecha": "2026-09-04T18:24:00",
+   "titulo": "Avances en IA: Modelos de Lenguaje, Razonamiento Matemático y Generación Musical",
+   "borrador": "20260904-1823-avances-en-ia-modelos-de-lenguaje-razonamiento-matem-tico-y.md",
+   "fuentes": [
+    {
+     "id": "2095968413646737608",
+     "cuenta": "OpenAI",
+     "fecha": "2026-09-04T20:13:05"
+    },
+    {
+     "id": "2095947707605266436",
+     "cuenta": "AnthropicAI",
+     "fecha": "2026-09-04T18:50:48"
+    },
+    {
+     "id": "2095905262229995736",
+     "cuenta": "Google",
+     "fecha": "2026-09-04T16:02:09"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A15",
+   "fecha": "2026-09-05T00:23:59",
+   "titulo": "Configurando el futuro digital: Acceso, educación y regulación en la era tecnológica",
+   "borrador": "20260905-0023-configurando-el-futuro-digital-acceso-educaci-n-y-regulaci-n.md",
+   "fuentes": [
+    {
+     "id": "2095518531693806017",
+     "cuenta": "nvidia",
+     "fecha": "2026-09-03T14:25:25"
+    },
+    {
+     "id": "2095942577929302115",
+     "cuenta": "Google",
+     "fecha": "2026-09-04T18:30:25"
+    },
+    {
+     "id": "2095790780631617646",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-04T08:27:14"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A16",
+   "fecha": "2026-09-07T18:35:27",
+   "titulo": "La evolución de la gobernanza y la infraestructura en la era de los sistemas digitales",
+   "borrador": "20260907-1835-la-evoluci-n-de-la-gobernanza-y-la-infraestructura-en-la-era.md",
+   "fuentes": [
+    {
+     "id": "2096932562367135953",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-07T12:04:16"
+    },
+    {
+     "id": "2095957571970425169",
+     "cuenta": "Microsoft",
+     "fecha": "2026-09-04T19:30:00"
+    },
+    {
+     "id": "2096252021883998427",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-05T15:00:03"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A17",
+   "fecha": "2026-09-12T12:28:20",
+   "titulo": "La interconexión de la IA, los datos y la seguridad en el panorama tecnológico",
+   "borrador": "20260912-1228-la-interconexi-n-de-la-ia-los-datos-y-la-seguridad-en-el-pan.md",
+   "fuentes": [
+    {
+     "id": "2098694743534215419",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-12T08:46:33"
+    },
+    {
+     "id": "2098506867366653954",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-11T20:20:00"
+    },
+    {
+     "id": "2098174917246161125",
+     "cuenta": "nvidia",
+     "fecha": "2026-09-10T22:20:57"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A18",
+   "fecha": "2026-09-12T18:30:47",
+   "titulo": "La Confluencia Tecnológica: IA, Finanzas y Blockchain en el Horizonte",
+   "borrador": "20260912-1830-la-confluencia-tecnol-gica-ia-finanzas-y-blockchain-en-el-ho.md",
+   "fuentes": [
+    {
+     "id": "2098109371204907047",
+     "cuenta": "GoogleAI",
+     "fecha": "2026-09-10T18:00:29"
+    },
+    {
+     "id": "2098118232133792050",
+     "cuenta": "OpenAI",
+     "fecha": "2026-09-10T18:35:42"
+    },
+    {
+     "id": "2098733694789800014",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-12T11:21:20"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A19",
+   "fecha": "2026-09-14T06:25:45",
+   "titulo": "Nuevas regulaciones y productos financieros en el ecosistema digital",
+   "borrador": "20260914-0625-nuevas-regulaciones-y-productos-financieros-en-el-ecosistema.md",
+   "fuentes": [
+    {
+     "id": "2099429197034766830",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-14T09:25:00"
+    },
+    {
+     "id": "2099416837649817892",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-14T08:35:54"
+    },
+    {
+     "id": "2099167214402187731",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-13T16:03:59"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A20",
+   "fecha": "2026-09-22T00:30:54",
+   "titulo": "La Convergencia Tecnológica: Automatización, Conectividad y Nuevas Plataformas",
+   "borrador": "20260922-0030-la-convergencia-tecnol-gica-automatizaci-n-conectividad-y-nu.md",
+   "fuentes": [
+    {
+     "id": "2102107015422304419",
+     "cuenta": "Tesla",
+     "fecha": "2026-09-21T18:45:42"
+    },
+    {
+     "id": "2102051060558750141",
+     "cuenta": "Google",
+     "fecha": "2026-09-21T15:03:21"
+    },
+    {
+     "id": "2102007208909164941",
+     "cuenta": "nvidia",
+     "fecha": "2026-09-21T12:09:06"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A21",
+   "fecha": "2026-09-23T18:30:43",
+   "titulo": "La IA como catalizador en la investigación científica y el desarrollo de modelos de lenguaje",
+   "borrador": "20260923-1830-la-ia-como-catalizador-en-la-investigaci-n-cient-fica-y-el-d.md",
+   "fuentes": [
+    {
+     "id": "2102824959827742916",
+     "cuenta": "AnthropicAI",
+     "fecha": "2026-09-23T18:18:33"
+    },
+    {
+     "id": "2102837574092161102",
+     "cuenta": "OpenAI",
+     "fecha": "2026-09-23T19:08:41"
+    },
+    {
+     "id": "2102824961538920822",
+     "cuenta": "AnthropicAI",
+     "fecha": "2026-09-23T18:18:34"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A22",
+   "fecha": "2026-09-24T18:31:10",
+   "titulo": "Avances tecnológicos y su impacto: regulación, exploración espacial y salud global",
+   "borrador": "20260924-1831-avances-tecnol-gicos-y-su-impacto-regulaci-n-exploraci-n-esp.md",
+   "fuentes": [
+    {
+     "id": "2103187132453920812",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-24T18:17:42"
+    },
+    {
+     "id": "2103254821021299199",
+     "cuenta": "SpaceX",
+     "fecha": "2026-09-24T22:46:40"
+    },
+    {
+     "id": "2102897863097545197",
+     "cuenta": "AnthropicAI",
+     "fecha": "2026-09-23T23:08:15"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A23",
+   "fecha": "2026-09-27T06:23:50",
+   "titulo": "La Convergencia de la IA Agéntica: Hardware, Software y Finanzas en el Ecosistema Digital",
+   "borrador": "20260927-0623-la-convergencia-de-la-ia-ag-ntica-hardware-software-y-finanz.md",
+   "fuentes": [
+    {
+     "id": "2103208482845647233",
+     "cuenta": "Google",
+     "fecha": "2026-09-24T19:42:32"
+    },
+    {
+     "id": "2103503154885357927",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-09-25T15:13:27"
+    },
+    {
+     "id": "2103854831899140287",
+     "cuenta": "AMD",
+     "fecha": "2026-09-26T14:30:54"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A24",
+   "fecha": "2026-10-03T06:26:08",
+   "titulo": "Avances en Inteligencia Artificial: Un Ecosistema en Evolución Constante",
+   "borrador": "20261003-0626-avances-en-inteligencia-artificial-un-ecosistema-en-evoluci.md",
+   "fuentes": [
+    {
+     "id": "2106115041317839119",
+     "cuenta": "Google",
+     "fecha": "2026-10-02T20:12:10"
+    },
+    {
+     "id": "2105809442365423918",
+     "cuenta": "nvidia",
+     "fecha": "2026-10-01T23:57:49"
+    },
+    {
+     "id": "2105782433362878757",
+     "cuenta": "Grok",
+     "fecha": "2026-10-01T22:10:30"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A25",
+   "fecha": "2026-10-04T06:25:14",
+   "titulo": "Innovación y privacidad en la tecnología espacial y financiera",
+   "borrador": "20261004-0625-innovaci-n-y-privacidad-en-la-tecnolog-a-espacial-y-financie.md",
+   "fuentes": [
+    {
+     "id": "2105598227282341938",
+     "cuenta": "SpaceX",
+     "fecha": "2026-10-01T09:58:32"
+    },
+    {
+     "id": "2105961169622093896",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-10-02T10:00:44"
+    },
+    {
+     "id": "2105597969093579160",
+     "cuenta": "SpaceX",
+     "fecha": "2026-10-01T09:57:30"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A26",
+   "fecha": "2026-10-05T12:24:46",
+   "titulo": "Tendencias en la evolución del software y los mercados digitales",
+   "borrador": "20261005-1224-tendencias-en-la-evoluci-n-del-software-y-los-mercados-digit.md",
+   "fuentes": [
+    {
+     "id": "2107048775378174257",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-10-05T10:02:29"
+    },
+    {
+     "id": "2106793980801261895",
+     "cuenta": "github",
+     "fecha": "2026-10-04T17:10:02"
+    },
+    {
+     "id": "2106096888625688941",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-10-02T19:00:02"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A27",
+   "fecha": "2026-10-08T18:23:42",
+   "titulo": "Panorama Tecnológico: Convergencia, Reconocimiento y la Evolución del Ecosistema Digital",
+   "borrador": "20261008-1823-panorama-tecnol-gico-convergencia-reconocimiento-y-la-evoluc.md",
+   "fuentes": [
+    {
+     "id": "2108291133025698301",
+     "cuenta": "SpaceX",
+     "fecha": "2026-10-08T20:19:10"
+    },
+    {
+     "id": "2108291409623314770",
+     "cuenta": "nvidia",
+     "fecha": "2026-10-08T20:20:16"
+    },
+    {
+     "id": "2108263252769554604",
+     "cuenta": "AMD",
+     "fecha": "2026-10-08T18:28:23"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A28",
+   "fecha": "2026-10-09T06:31:08",
+   "titulo": "La Convergencia Tecnológica: Ciberseguridad, Espacio y Finanzas Digitales en 2026",
+   "borrador": "20261009-0631-la-convergencia-tecnol-gica-ciberseguridad-espacio-y-finanza.md",
+   "fuentes": [
+    {
+     "id": "2108302539498414208",
+     "cuenta": "AnthropicAI",
+     "fecha": "2026-10-08T21:04:30"
+    },
+    {
+     "id": "2108201884204904862",
+     "cuenta": "SpaceX",
+     "fecha": "2026-10-08T14:24:32"
+    },
+    {
+     "id": "2108157988913451351",
+     "cuenta": "CoinDesk",
+     "fecha": "2026-10-08T11:30:06"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A29",
+   "fecha": "2026-10-09T18:23:59",
+   "titulo": "Transparencia y Trazabilidad en la Era Digital: Un Análisis de Anuncios Tecnológicos Recientes",
+   "borrador": "20261009-1823-transparencia-y-trazabilidad-en-la-era-digital-un-an-lisis-d.md",
+   "fuentes": [
+    {
+     "id": "2108680150556737819",
+     "cuenta": "AnthropicAI",
+     "fecha": "2026-10-09T22:04:59"
+    },
+    {
+     "id": "2108210039764959426",
+     "cuenta": "SpaceX",
+     "fecha": "2026-10-08T14:56:56"
+    },
+    {
+     "id": "2107836750257107133",
+     "cuenta": "GoogleAI",
+     "fecha": "2026-10-07T14:13:37"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  },
+  {
+   "codigo": "A30",
+   "fecha": "2026-10-10T06:24:59",
+   "titulo": "Análisis del lanzamiento de la misión Tranche 1 de Semper Citius SDA por Falcon 9",
+   "borrador": "20261010-0624-an-lisis-del-lanzamiento-de-la-misi-n-tranche-1-de-semper-ci.md",
+   "fuentes": [
+    {
+     "id": "2108821569225310335",
+     "cuenta": "SpaceX",
+     "fecha": "2026-10-10T07:26:56"
+    },
+    {
+     "id": "2108812445557084274",
+     "cuenta": "SpaceX",
+     "fecha": "2026-10-10T06:50:41"
+    },
+    {
+     "id": "2108867994206216214",
+     "cuenta": "SpaceX",
+     "fecha": "2026-10-10T10:31:25"
+    }
+   ],
+   "fuentes_sin_texto": 0
+  }
+ ],
+ "subconjunto_autor": [
+  "A01",
+  "A02",
+  "A07",
+  "A15",
+  "A16",
+  "A20",
+  "A25",
+  "A28",
+  "A29",
+  "A30"
+ ]
+}
