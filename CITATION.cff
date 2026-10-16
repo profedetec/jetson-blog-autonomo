@@ -8,7 +8,11 @@ authors:
     affiliation: Universidad Autónoma de Guadalajara
     orcid: "https://orcid.org/0009-0008-0224-9770"
 license: MIT
-doi: 10.5281/zenodo.23353297
+doi: 10.5281/zenodo.23426270
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23353297
+    description: DOI concepto (todas las versiones)
 repository-code: "https://github.com/profedetec/jetson-blog-autonomo"
 version: 1.1.0
 date-released: 2026-10-16

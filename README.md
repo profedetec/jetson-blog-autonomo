@@ -99,4 +99,6 @@ MIT. Ver [LICENSE](LICENSE).
 
 ## Cómo citar
 
-Galicia Guajardo, S. I. (2026). *jetson-blog-autonomo: sistema autónomo de publicación de blog científico en una Jetson Nano* (Versión 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23353297
+Galicia Guajardo, S. I. (2026). *jetson-blog-autonomo: sistema autónomo de publicación de blog científico en una Jetson Nano* (Versión 1.1.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23426270
+
+El DOI [10.5281/zenodo.23353297](https://doi.org/10.5281/zenodo.23353297) apunta siempre a la última versión; la 1.1.0 es la que usa el artículo.
