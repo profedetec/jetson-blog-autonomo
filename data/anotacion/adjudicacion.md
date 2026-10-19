@@ -1,7 +1,7 @@
-# Adjudicación propuesta — fase de consenso (2026-10-16)
+# Adjudicación — fase de consenso (propuesta 2026-10-16, decidida por el autor 2026-10-19)
 
 Las etiquetas ciegas del autor en `para_autor/anotacion_autor.xlsx` NO se modifican;
-esta tabla es la propuesta para la etiqueta de consenso, a revisar con el autor.
+esta tabla es la propuesta de consenso; ver la decisión del autor al final.
 
 ## Acuerdo crudo (87 afirmaciones comparadas, 1 marcada NA por el autor)
 
@@ -44,3 +44,11 @@ A02 #2/#7/#8 (dato en la fuente que el autor marcó EC tras verificarlo fuera).
 - A02 #9 (Vera Rubin "para aplicaciones astronómicas"): ambos EI. Alucinación confirmada.
 - Hoja "Faltantes": el autor no agregó afirmaciones → acuerdo total en la segmentación.
 - A28 #3: corregida en `anotaciones_claude.json` (R → D, texto de la afirmación) el 2026-10-16 tras aprobación del autor; métricas recalculadas.
+
+## Decisión del autor (2026-10-19)
+
+El autor revisó las 15 filas de desacuerdo y la afirmación A02 #4 (marcada NA), cada una
+con el texto de la fuente y la nota de Claude, y aceptó todas las propuestas de consenso
+de esta tabla conforme a PROTOCOLO.md. A07 #2 queda en **D** (distorsión menor de nombre).
+Las etiquetas de consenso de `anotaciones_claude.json` no cambian: la única modificación
+respecto a las etiquetas ciegas de Claude sigue siendo A28 #3 (R → D).

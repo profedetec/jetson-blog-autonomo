@@ -71,7 +71,7 @@ print('redaccion (s)',q([(r['p4']-r['p3']).total_seconds() for r in ok]))
 print('publicacion (s)',q([(r['pub']-r['p4']).total_seconds() for r in ok]))
 # slots
 from datetime import timedelta
-t=datetime(2026,8,20,18);slots=[]
+t=datetime(2026,8,20,12);slots=[]
 while t<=datetime(2026,10,13,6): slots.append(t); t+=timedelta(hours=6)
 have=set(r['start'].replace(minute=0,second=0) for r in cron)
 miss=[s for s in slots if s not in have]

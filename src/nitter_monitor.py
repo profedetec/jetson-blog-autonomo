@@ -238,7 +238,7 @@ def save_post_data(account: str, entry, is_influencer: bool, keyword: str = None
     Guarda datos del post en JSON diario para análisis posterior.
 
     Conserva el mismo esquema (con 'link' conteniendo /status/<id>) del que
-    depende salondetec_blog_auto.py para saber qué noticias ya se enviaron por
+    depende blog_auto.py para saber qué noticias ya se enviaron por
     Telegram. Ahora además incluye las métricas de engagement.
     """
     os.makedirs(NITTER_DATA_DIR, exist_ok=True)

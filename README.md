@@ -17,7 +17,7 @@ datos personales.
 ```
 cron (00/06/12/18 h)
   └─ net-wait.sh            espera a que haya red antes de lanzar el job
-       └─ salondetec_blog_auto.py   orquestador
+       └─ blog_auto.py   orquestador
             1. x_engagement.py      captura tuits y engagement (endpoint público
                                     de sindicación, sin API key) → SQLite
             2. selección            relevancia temática + engagement real,
@@ -33,7 +33,7 @@ cron (cada 30 min)
 
 | Archivo | Función |
 |---|---|
-| `src/salondetec_blog_auto.py` | Orquestador: selección, redacción, publicación |
+| `src/blog_auto.py` | Orquestador: selección, redacción, publicación |
 | `src/x_engagement.py` | Captura de tuits/engagement y base SQLite |
 | `src/nitter_monitor.py` | Lista de cuentas monitoreadas y alertas |
 | `src/publisher/` | Cliente del panel del blog (login, CSRF, imagen) |
@@ -47,13 +47,13 @@ pip3 install -r requirements.txt
 cp config.example.json config.json   # rellenar URLs, usuario, clave de API
 cp .env.example .env                 # token de Telegram (opcional)
 set -a; . ./.env; set +a
-python3 src/salondetec_blog_auto.py --help
+python3 src/blog_auto.py --help
 ```
 
 Ejemplo de `crontab`:
 
 ```
-0 0,6,12,18 * * * flock -n /tmp/blog.lock /ruta/src/net-wait.sh 600 python3 /ruta/src/salondetec_blog_auto.py
+0 0,6,12,18 * * * flock -n /tmp/blog.lock /ruta/src/net-wait.sh 600 python3 /ruta/src/blog_auto.py
 */30 * * * *      flock -n /tmp/mon.lock  /ruta/src/net-wait.sh 120 python3 /ruta/src/nitter_monitor.py
 ```
 

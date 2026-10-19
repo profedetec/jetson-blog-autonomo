@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-salondetec_blog_auto.py — Publicación automática en salondetec.com (8:00 y 20:00)
+blog_auto.py — Publicación automática en salondetec.com (8:00 y 20:00)
 
 FLUJO
     1. Refresca el engagement real (likes/respuestas) de las cuentas monitoreadas
@@ -19,9 +19,9 @@ FLUJO
     7. Avisa por Telegram y deja copia en markdown.
 
 USO
-    python3 salondetec_blog_auto.py              # ejecución normal
-    python3 salondetec_blog_auto.py --dry-run    # no publica ni marca nada
-    python3 salondetec_blog_auto.py --no-refresh # salta el paso de red (pruebas)
+    python3 blog_auto.py              # ejecución normal
+    python3 blog_auto.py --dry-run    # no publica ni marca nada
+    python3 blog_auto.py --no-refresh # salta el paso de red (pruebas)
 
 Compatible con Python 3.6 (Jetson Nano / Ubuntu 18.04).
 """
@@ -1579,7 +1579,7 @@ def enviar_telegram(texto):
 
 def _cargar_publicador(config):
     sys.path.insert(0, PUBLISHER_DIR)
-    from publisher.salondetec_publisher import SalonDeTecPublisher
+    from publisher.cms_publisher import SalonDeTecPublisher
     return SalonDeTecPublisher(config)
 
 
