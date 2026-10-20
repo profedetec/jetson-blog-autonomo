@@ -1,6 +1,6 @@
 {
   "title": "jetson-blog-autonomo: sistema autónomo de publicación de blog científico en una Jetson Nano",
-  "description": "Sistema que, sin intervención humana, selecciona noticias de tecnología publicadas en X, redacta artículos de divulgación científica en español con modelos de lenguaje (Gemini/Gemma) y los publica en un blog. Corre con cron en una NVIDIA Jetson Nano (2020). Copia saneada del sistema en producción que acompaña un artículo académico en preparación. La versión 1.1.0 añade los datos congelados del artículo (log de operación y ledger del 20-ago al 13-oct-2026, protocolo, muestra y etiquetas de la auditoría de exactitud factual) y los scripts que regeneran sus tablas.",
+  "description": "Sistema que, sin intervención humana, selecciona noticias de tecnología publicadas en X, redacta artículos de divulgación científica en español con modelos de lenguaje (Gemini/Gemma) y los publica en un blog. Corre con cron en una NVIDIA Jetson Nano (2020). Copia saneada del sistema en producción que acompaña un artículo académico enviado a revisión. La versión 1.1.0 añade los datos congelados del artículo (log de operación y ledger del 20-ago al 13-oct-2026, protocolo, muestra y etiquetas de la auditoría de exactitud factual) y los scripts que regeneran sus tablas. La versión 1.1.1 quita el correo del autor de los datos de anotación, renombra los scripts principales, corrige el conteo de franjas de cron (216) y añade la decisión del autor en la adjudicación.",
   "upload_type": "software",
   "language": "spa",
   "license": "MIT",
@@ -20,5 +20,5 @@
     "divulgación científica",
     "inteligencia artificial"
   ],
-  "version": "1.1.0"
+  "version": "1.1.1"
 }
