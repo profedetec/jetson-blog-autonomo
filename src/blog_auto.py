@@ -12,7 +12,10 @@ FLUJO
        W arranca bajo y sube solo conforme se acumula histórico propio
        (ver ENGAGEMENT_RAMP). Así el blog publica desde el primer día sin
        renunciar al criterio de popularidad real cuando ya haya datos.
-    4. Elige las 3 mejores no publicadas antes.
+    4. Elige las 3 mejores no publicadas antes. Si hay una TENDENCIA sin
+       cubrir (varias marcas hablando de lo mismo con engagement muy por
+       encima de lo normal), el artículo es sobre ella. Si no, se enfría por
+       MARCA (no por cuenta) para que no salgan siempre las mismas empresas.
     5. Redacta UN artículo de estilo científico que las integra (OpenRouter).
     6. Lo publica en salondetec.com reutilizando SalonDeTecPublisher, que ya
        resuelve login + CSRF + subida de imagen.
@@ -187,7 +190,7 @@ log = logging.getLogger("salondetec")
 # SCORING TEMÁTICO POR DOMINIOS
 # ─────────────────────────────────────────────
 
-# Catorce dominios con el MISMO techo de puntuación.
+# Quince dominios (catorce hasta el 2026-10-21) con el MISMO techo de puntuación.
 #
 # Por qué se reescribió (auditoría del 2026-10-13 sobre 169 artículos
 # publicados): el scoring anterior era una sola escalera de keywords
@@ -264,7 +267,23 @@ TEMAS = {
             "conducción autónoma", "self-driving", "robotaxi", "waymo",
             "actuador", "actuator", "manipulación", "teleoperación",
             "brazo robótico", "robotic arm", "cobot", "lidar", "navegación",
-            "exoesqueleto", "vehículo eléctrico", "electric vehicle",
+            "exoesqueleto",
+        ],
+    },
+    # Añadido el 2026-10-21: el lanzamiento del Tesla Roadster volador (15-oct)
+    # fue lo más comentado de la semana y no casaba con NINGÚN dominio —"flying
+    # cars", "Roadster", "livestream"—, así que quedó fuera por el umbral
+    # temático pese a sus 832 mil likes.
+    "movilidad": {
+        "nombre": "Movilidad y vehículos",
+        "claves": [
+            "vehículo eléctrico", "electric vehicle", "ev", "evs", "auto eléctrico",
+            "coche eléctrico", "carro eléctrico", "auto volador", "autos voladores",
+            "flying car", "flying", "evtol", "vtol", "aerotaxi", "air taxi",
+            "roadster", "cybertruck", "cybercab", "model y", "model 3",
+            "supercharger", "carga rápida", "fast charging", "autopilot", "fsd",
+            "full self-driving", "tren motriz", "powertrain", "movilidad",
+            "mobility", "automotriz", "automotive", "vehículo", "vehicle",
         ],
     },
     "salud_biotech": {
@@ -406,6 +425,10 @@ RUIDO_COMERCIAL = [
     "feliz año", "happy holidays", "felices fiestas", "happy new year",
     "aniversario", "cumpleaños", "throwback", "#tbt", "caption this",
     "we're hiring", "estamos contratando", "job opening", "apply now",
+    # Caso real del 2026-10-15: "Wishing America a Happy Christopher Columbus
+    # Day" de @ENERGY entró como fuente de un artículo de energía.
+    "wishing", "happy columbus day", "happy thanksgiving", "happy halloween",
+    "happy independence day", "feliz día",
 ]
 
 # Mínimo temático para entrar al sorteo. Un tuit que no casa con NINGÚN dominio
@@ -426,7 +449,7 @@ def _patron(clave):
             + r"(?:e?s)?(?![A-Za-z0-9_])")
 
 
-# Los patrones se compilan UNA vez al importar. Son unos 500 entre los catorce
+# Los patrones se compilan UNA vez al importar. Son unos 500 entre los quince
 # dominios, el ruido comercial y las señales de noticia: compilarlos dentro del
 # bucle de candidatos desbordaba la caché interna de `re` (512 entradas) y
 # clasificar una ventana de tres días tardaba minutos en la Jetson.
@@ -466,7 +489,7 @@ def tema_principal(texto):
 
 def score_tematico(texto):
     """
-    Relevancia temática 0–10, con el mismo techo para los catorce dominios.
+    Relevancia temática 0–10, con el mismo techo para los quince dominios.
 
     0 si es ruido comercial o no toca ningún dominio: ese tuit queda fuera del
     corte por el umbral, pase lo que pase con su engagement.
@@ -604,6 +627,371 @@ def peso_engagement(dias_historico):
 
 
 # ─────────────────────────────────────────────
+# MARCAS
+# ─────────────────────────────────────────────
+
+# Auditoría del 2026-10-21 sobre los últimos 60 artículos: @SpaceX salió en 41
+# y Google en 32 si se suman sus seis cuentas (Google, GoogleDeepMind,
+# GoogleCloud, GoogleAI, GeminiApp, AndroidDev). La penalización era por
+# CUENTA, así que Google rotaba de cuenta y nunca se enfriaba, y un tuit de
+# @github sobre Gemini tampoco contaba como Google. Ahora el enfriamiento es
+# por MARCA: la de la cuenta y las que el tuit menciona.
+MARCA_CUENTA = {
+    "Google": "Google", "GoogleDeepMind": "Google", "GoogleAI": "Google",
+    "GeminiApp": "Google", "GoogleCloud": "Google", "AndroidDev": "Google",
+    "AIatMeta": "Meta", "Meta": "Meta", "sama": "OpenAI", "Grok": "xAI",
+    "AnthropicAI": "Anthropic", "deepseek_ai": "DeepSeek",
+    "Kimi_Moonshot": "Moonshot AI", "nvidia": "NVIDIA",
+    "SamsungMobile": "Samsung", "AppleSupport": "Apple",
+    "XiaomiEspana": "Xiaomi", "Raspberry_Pi": "Raspberry Pi",
+    "Alienware": "Dell", "github": "GitHub", "huggingface": "Hugging Face",
+    "NASAJPL": "NASA", "esa": "ESA", "RocketLab": "Rocket Lab",
+    "BostonDynamics": "Boston Dynamics", "ENERGY": "DOE", "CISAgov": "CISA",
+    "MicronTech": "Micron", "perplexity_ai": "Perplexity", "cohere": "Cohere",
+    "salesforce": "Salesforce", "elonmusk": "Elon Musk", "SECGov": "SEC",
+    "NVIDIARobotics": "NVIDIA", "Figure_robot": "Figure AI", "1x_tech": "1X",
+    "Alibaba_Qwen": "Alibaba",
+}
+
+# Marcas y productos que se detectan en el TEXTO del tuit. El producto cuenta
+# como su empresa: "Starship" es SpaceX y "Gemini" es Google.
+MENCIONES_MARCA = {
+    "OpenAI": ["openai", "chatgpt", "gpt", "sora"],
+    "Google": ["google", "gemini", "deepmind", "android", "pixel", "youtube"],
+    "Anthropic": ["anthropic", "claude"],
+    "xAI": ["xai", "grok"],
+    "Meta": ["meta ai", "llama", "instagram", "whatsapp"],
+    "SpaceX": ["spacex", "starship", "starlink", "falcon 9", "falcon heavy",
+               "dragon"],
+    "Tesla": ["tesla", "cybertruck", "cybercab", "roadster", "optimus"],
+    "NVIDIA": ["nvidia", "cuda", "geforce", "rtx"],
+    "Microsoft": ["microsoft", "copilot", "azure", "windows", "xbox"],
+    "Apple": ["apple", "iphone", "ipad", "macbook", "vision pro"],
+    "Amazon": ["amazon", "aws", "alexa"],
+    "Samsung": ["samsung", "galaxy z", "galaxy s"],
+    "Qualcomm": ["qualcomm", "snapdragon"],
+    "Alibaba": ["alibaba", "qwen"],
+    "Bitcoin": ["bitcoin", "btc"],
+    "Ethereum": ["ethereum", "eth"],
+}
+PAT_MARCAS = {m: tuple(re.compile(_patron(a), re.IGNORECASE) for a in alias)
+              for m, alias in MENCIONES_MARCA.items()}
+
+VENTANA_MARCAS = 20          # 5 días a 4 artículos/día
+PENA_MARCA_MAX = 3.0
+# La marca de la cuenta pesa entera; una marca solo mencionada, menos.
+PESO_MENCION = 0.5
+# Empujón a las marcas que no han salido en toda la ventana: es lo que hace
+# que entren Raspberry Pi, Qualcomm o Boston Dynamics y no siempre las mismas.
+BONUS_MARCA_NUEVA = 0.75
+
+
+def marca_de_cuenta(cuenta):
+    return MARCA_CUENTA.get(cuenta) or NOMBRE_CUENTA.get(cuenta) or cuenta
+
+
+@functools.lru_cache(maxsize=8192)
+def marcas_mencionadas(texto):
+    t = texto or ""
+    return frozenset(m for m, pats in PAT_MARCAS.items()
+                     if any(p.search(t) for p in pats))
+
+
+def marcas_de_tweet(t):
+    return {marca_de_cuenta(t["account"])} | marcas_mencionadas(t.get("text"))
+
+
+def marcas_de_entrada(entrada):
+    """Marcas de un artículo publicado. Las entradas anteriores al 2026-10-21
+    no guardan `marcas`: se deducen de las cuentas fuente y del título."""
+    if entrada.get("marcas"):
+        return set(entrada["marcas"])
+    marcas = set(marca_de_cuenta(c) for c in cuentas_de_entrada(entrada))
+    return marcas | marcas_mencionadas(entrada.get("articulo") or "")
+
+
+# ─────────────────────────────────────────────
+# TENDENCIAS
+# ─────────────────────────────────────────────
+
+# Por qué existe (2026-10-21): el Tesla Roadster volador fue lo más comentado
+# del 15–16 de octubre y el blog no lo cubrió. Los tuits SÍ estaban en la base
+# —@elonmusk "Turns out the future does have flying cars" (832 mil likes, 20×
+# la mediana de la cuenta), tres de @Tesla y dos de @CoinDesk—, pero los
+# virales son cortos: el filtro de 60 caracteres los tiraba antes de puntuar,
+# y ninguna palabra casaba con un dominio. Una tendencia se reconoce por dos
+# rasgos que el score por tuit no ve: varias marcas hablando de lo mismo a la
+# vez (términos que se disparan frente a su frecuencia habitual) y un
+# engagement muy por encima de lo normal para esas cuentas.
+
+MIN_CHARS = 60               # mínimo para un tuit normal
+MIN_CHARS_TENDENCIA = 15     # los virales son cortos; dentro de tendencia basta
+TENDENCIA_BASE_DIAS = 60     # histórico para medir la frecuencia habitual
+TENDENCIA_BURST = 4.0        # veces más frecuente que lo habitual
+TENDENCIA_MIN_MARCAS = 3     # marcas distintas hablando de lo mismo...
+TENDENCIA_MIN_MARCAS_VIRAL = 2   # ...o solo 2 si el grupo es viral de verdad
+TENDENCIA_VIRAL_ENG = 150000     # engagement bruto que se considera viral
+TENDENCIA_CALOR = 3.0        # engagement del grupo / suma de medianas
+# Al menos 2 marcas del grupo deben ir por encima de su propio engagement
+# normal. Sin esto, un viral de una marca "calentaba" a cualquier grupo donde
+# cayera: en la calibración, "Super" unió un tuit del Roadster con "Nemotron
+# 3.5 Super" de NVIDIA y salió como la tendencia más fuerte de la semana.
+TENDENCIA_CALOR_MARCA = 1.5
+TENDENCIA_MIN_ENG = 20000    # engagement bruto total mínimo del grupo
+TENDENCIA_COBERTURA_H = 48   # no repetir un artículo de la misma tendencia
+# Dos términos son la misma tendencia si comparten al menos esta fracción de
+# los tuits del menor ("roadster" y "tesla" el 16-oct).
+TENDENCIA_SOLAPE = 0.5
+# Un viral de una cuenta del grupo, publicado en el mismo lapso, se suma aunque
+# no comparta palabras: "Turns out the future does have flying cars" no dice
+# "Roadster", pero @elonmusk lo publicó la noche del evento con 18× su mediana.
+# Con 4× se colaba un tuit de @CoinDesk sobre Ripple publicado esa misma tarde.
+VIRAL_RATIO = 8.0
+VIRAL_MARGEN_H = 12
+
+# Palabras que van con mayúscula sin ser nombre propio (inicio de frase,
+# títulos de evento). El burst y el requisito de varias marcas filtran casi
+# todas; esta lista quita las que se cuelan.
+STOP_TENDENCIA = set("""
+the this that with from your what when where which while will have about
+into more most just like than then them they their there these those been
+being over also only some such very here year years today tomorrow week
+weekend live watch join learn read check update latest breaking thanks thank
+first next last time days make made makes need know want help using used
+built build team world people future still does turns could would should
+real life love meet introducing super ultra plus mini edition announcing welcome congrats congratulations
+monday tuesday wednesday thursday friday saturday sunday january february
+march april june july august september october november december
+para como este esta esto pero más desde hasta sobre entre todo todos hoy
+nuevo nueva nuevos nuevas años semana gracias aquí ahora
+""".split())
+
+
+def _terminos(texto):
+    """
+    Términos candidatos a tendencia: nombres propios y de producto (palabras
+    de 4+ letras con mayúscula inicial, hashtags o con dígitos), en minúsculas.
+
+    Solo nombres propios porque las palabras comunes encadenaban todo: en la
+    calibración del 2026-10-21, "energy", "physics" o "play" unían 100 tuits
+    de 18 marcas en una sola "tendencia" falsa. "Roadster", "Argon" o
+    "Starship" sí nombran un asunto concreto.
+    """
+    t = re.sub(r"https?://\S+|@\w+", " ", texto or "")
+    out = set()
+    for p in re.findall(r"#?[A-Za-zÁÉÍÓÚáéíóúñÑ][\wáéíóúñ\-]{3,}", t):
+        limpio = p.lstrip("#").strip("-")
+        if not (p.startswith("#") or limpio[:1].isupper()
+                or any(ch.isdigit() for ch in limpio)):
+            continue
+        limpio = limpio.lower()
+        if limpio not in STOP_TENDENCIA and not limpio.isdigit():
+            out.add(limpio)
+    return out
+
+
+def _sin_urls(texto):
+    return re.sub(r"https?://\S+", "", texto or "").strip()
+
+
+def _fecha_tweet(t):
+    return datetime.strptime(t["created_at"][:19], "%Y-%m-%dT%H:%M:%S")
+
+
+def _marcas_de(tweets):
+    return set(marca_de_cuenta(t["account"]) for t in tweets)
+
+
+def detectar_tendencias(conn, candidatos, medianas, ledger):
+    """
+    Grupos de tuits que forman una tendencia, del más al menos caliente.
+
+    1. Términos con burst: aparecen en la ventana TENDENCIA_BURST veces más de
+       lo habitual en los TENDENCIA_BASE_DIAS previos, en tuits de al menos
+       dos marcas.
+    2. Cada término es un grupo; dos grupos se funden solo si comparten la
+       mayoría de sus tuits (TENDENCIA_SOLAPE). Sin encadenar: un término
+       común no puede arrastrar a todo el pool.
+    3. Se suman los virales de las cuentas del grupo en el mismo lapso.
+    4. Es tendencia si reúne TENDENCIA_MIN_MARCAS marcas (o 2 con engagement
+       viral), su engagement supera TENDENCIA_CALOR veces la suma de las
+       medianas de sus cuentas, toca algún dominio del nicho y no se cubrió
+       en las últimas TENDENCIA_COBERTURA_H horas.
+    """
+    if not candidatos:
+        return []
+    inicio = min(t["created_at"] for t in candidatos)
+    desde = (datetime.strptime(inicio[:19], "%Y-%m-%dT%H:%M:%S")
+             - timedelta(days=TENDENCIA_BASE_DIAS)).strftime("%Y-%m-%dT%H:%M:%S")
+
+    terminos = {t["id"]: _terminos(t.get("text")) for t in candidatos}
+    en_ventana = {}
+    for t in candidatos:
+        for term in terminos[t["id"]]:
+            en_ventana.setdefault(term, []).append(t)
+
+    # La frecuencia habitual solo se cuenta para los términos con 2+ marcas en
+    # la ventana, que son pocas decenas.
+    posibles = {term: tweets for term, tweets in en_ventana.items()
+                if len(_marcas_de(tweets)) >= 2}
+    if not posibles:
+        return []
+    base = dict.fromkeys(posibles, 0)
+    sql = ("SELECT text FROM tweets WHERE is_retweet = 0 AND created_at >= ? "
+           "AND created_at < ?")
+    for (texto,) in conn.execute(sql, (desde, inicio)):
+        for term in _terminos(texto) & set(base):
+            base[term] += 1
+
+    calientes = []
+    for term, tweets in posibles.items():
+        esperado = base[term] * float(VENTANA_DIAS) / TENDENCIA_BASE_DIAS
+        if len(tweets) / (esperado + 1.0) >= TENDENCIA_BURST:
+            calientes.append(term)
+    if not calientes:
+        return []
+
+    # Grupos por término, fundiendo los que comparten la mayoría de tuits.
+    calientes.sort(key=lambda x: len(posibles[x]), reverse=True)
+    grupos = []   # [terminos, {id: tweet}]
+    for term in calientes:
+        ids = {t["id"]: t for t in posibles[term]}
+        for g in grupos:
+            comunes = len(set(ids) & set(g[1]))
+            if comunes >= TENDENCIA_SOLAPE * min(len(ids), len(g[1])):
+                g[0].add(term)
+                g[1].update(ids)
+                break
+        else:
+            grupos.append([{term}, ids])
+
+    # El viral va al grupo donde su cuenta tiene más tuits: es el asunto del
+    # que esa cuenta estaba hablando en ese momento.
+    margen = timedelta(hours=VIRAL_MARGEN_H)
+    for t in candidatos:
+        mediana = medianas.get(t["account"])
+        if not mediana or engagement_bruto(t) < VIRAL_RATIO * mediana:
+            continue
+        mejor, propios_max = None, 0
+        for _, tweets in grupos:
+            if t["id"] in tweets:
+                mejor = None
+                break
+            grupo = list(tweets.values())
+            propios = sum(1 for x in grupo if x["account"] == t["account"])
+            if (propios > propios_max
+                    and min(map(_fecha_tweet, grupo)) - margen <= _fecha_tweet(t)
+                    <= max(map(_fecha_tweet, grupo)) + margen):
+                mejor, propios_max = tweets, propios
+        if mejor is not None:
+            mejor[t["id"]] = t
+
+    cubiertas = set()
+    limite = datetime.now() - timedelta(hours=TENDENCIA_COBERTURA_H)
+    for e in ledger.get("publicados", []):
+        try:
+            fecha = datetime.strptime(e.get("fecha", "")[:19], "%Y-%m-%dT%H:%M:%S")
+        except ValueError:
+            continue
+        if fecha < limite:
+            continue
+        cubiertas.update(e.get("tendencia_terminos") or [])
+        # También cuenta un artículo NORMAL que ya trató el asunto con 2+ de
+        # sus fuentes: en la simulación del 16-oct el Roadster salió por la vía
+        # normal a las 00:00 y otra vez como tendencia a las 12:00.
+        ids = e.get("tweet_ids") or []
+        if ids:
+            cuenta = {}
+            sql_ids = "SELECT text FROM tweets WHERE id IN (%s)" % ",".join("?" * len(ids))
+            for (texto,) in conn.execute(sql_ids, ids):
+                for term in _terminos(texto):
+                    cuenta[term] = cuenta.get(term, 0) + 1
+            cubiertas.update(term for term, k in cuenta.items() if k >= 2)
+
+    tendencias = []
+    for terms, por_id in grupos:
+        tweets = list(por_id.values())
+        marcas = _marcas_de(tweets)
+        bruto = sum(engagement_bruto(t) for t in tweets)
+        minimo = (TENDENCIA_MIN_MARCAS_VIRAL if bruto >= TENDENCIA_VIRAL_ENG
+                  else TENDENCIA_MIN_MARCAS)
+        if len(marcas) < minimo or bruto < TENDENCIA_MIN_ENG or terms & cubiertas:
+            continue
+        # Sin mediana (cuenta con poco histórico) se toma su propio engagement:
+        # que una cuenta nueva no parezca caliente solo por no tener referencia.
+        def _normal(t):
+            return medianas.get(t["account"]) or max(1.0, engagement_bruto(t))
+        calor = bruto / float(max(1.0, sum(_normal(t) for t in tweets)))
+        calientes_m = 0
+        for m in marcas:
+            de_m = [t for t in tweets if marca_de_cuenta(t["account"]) == m]
+            if (sum(engagement_bruto(t) for t in de_m)
+                    >= TENDENCIA_CALOR_MARCA * sum(_normal(t) for t in de_m)):
+                calientes_m += 1
+        if calor < TENDENCIA_CALOR or calientes_m < 2:
+            continue
+        # Dominio del grupo: el más repetido entre sus tuits, ponderado por
+        # engagement, no el del texto concatenado (un solo "rocket" volvía
+        # "espacio" al grupo del Roadster).
+        votos = {}
+        for t in tweets:
+            tt = tema_principal(t.get("text"))
+            if tt:
+                votos[tt] = votos.get(tt, 0) + engagement_bruto(t) + 1
+        texto = " ".join(t.get("text") or "" for t in tweets)
+        if not votos or _es_ruido(texto):
+            continue
+        nombre = max(terms, key=lambda x: (len(_marcas_de(posibles[x])),
+                                           len(posibles[x])))
+        tendencias.append({"nombre": nombre, "terminos": sorted(terms),
+                           "tweets": tweets, "calor": calor, "bruto": bruto,
+                           "tema": max(votos, key=votos.get), "marcas": marcas})
+
+    tendencias.sort(key=lambda x: x["calor"] * math.log10(1 + x["bruto"]),
+                    reverse=True)
+    return tendencias
+
+
+def _componer_tendencia(tendencia, n, ya_publicados, medianas):
+    """
+    Las n fuentes de un artículo de tendencia: primero una por marca, de más a
+    menos engagement relativo; si no alcanza, se repite cuenta (el caso del
+    Roadster: @Tesla publicó varios tuits sobre el mismo evento).
+
+    Al menos una fuente debe tener MIN_CHARS: "Real life, baby" y "Turns out
+    the future does have flying cars" son la tendencia, pero no dicen QUÉ pasó.
+    """
+    tweets = [t for t in tendencia["tweets"] if t["id"] not in ya_publicados
+              and len(_sin_urls(t.get("text"))) >= MIN_CHARS_TENDENCIA]
+    tweets.sort(key=lambda t: (score_engagement(t, medianas),
+                               len(_sin_urls(t.get("text")))), reverse=True)
+    largos = [t for t in tweets if len(_sin_urls(t.get("text"))) >= MIN_CHARS]
+    if not largos:
+        return []
+    sel, marcas = [largos[0]], {marca_de_cuenta(largos[0]["account"])}
+    for t in tweets:
+        if len(sel) == n:
+            break
+        m = marca_de_cuenta(t["account"])
+        if m not in marcas:
+            sel.append(t)
+            marcas.add(m)
+    for t in tweets:
+        if len(sel) == n:
+            break
+        if t not in sel:
+            sel.append(t)
+    if len(marcas) < TENDENCIA_MIN_MARCAS_VIRAL or len(sel) < n:
+        return []
+    sel.sort(key=lambda t: score_engagement(t, medianas), reverse=True)
+    for t in sel:
+        t["tendencia"] = tendencia["nombre"]
+        t["tendencia_terminos"] = tendencia["terminos"]
+        t["tema"] = tema_principal(t.get("text")) or tendencia["tema"]
+    return sel
+
+
+# ─────────────────────────────────────────────
 # NOTICIAS YA ENVIADAS POR TELEGRAM
 # ─────────────────────────────────────────────
 
@@ -661,7 +1049,13 @@ def guardar_ledger(ledger, titulo, tweets):
         # Dominios tratados: los lee `penalizaciones()` para no repetir tema
         # en los siguientes artículos.
         "temas": sorted(set(t["tema"] for t in tweets if t.get("tema"))),
+        # Marcas de las fuentes y de lo que mencionan: las lee `penalizaciones()`.
+        "marcas": sorted(set().union(*(marcas_de_tweet(t) for t in tweets))),
     })
+    tend = next((t for t in tweets if t.get("tendencia")), None)
+    if tend:
+        ledger["publicados"][-1]["tendencia"] = tend["tendencia"]
+        ledger["publicados"][-1]["tendencia_terminos"] = tend["tendencia_terminos"]
     # Conserva el último año; sin poda el archivo crece sin límite.
     ledger["publicados"] = ledger["publicados"][-730:]
     with open(LEDGER_PATH, "w", encoding="utf-8") as f:
@@ -675,7 +1069,6 @@ def guardar_ledger(ledger, titulo, tweets):
 # Cuántos artículos recientes se miran para no repetir cuenta ni tema.
 VENTANA_DIVERSIDAD = 12
 # Penalización máxima (en puntos del score 0–10) por saturación.
-PENA_CUENTA_MAX = 2.5
 PENA_TEMA_MAX = 2.0
 # Peso acumulado de apariciones recientes que ya se considera saturación plena.
 # 3.0 ≈ haber salido en los tres últimos artículos.
@@ -716,7 +1109,7 @@ def cuentas_de_entrada(entrada):
     return cuentas
 
 
-def _pena(indices, maximo):
+def _pena(indices, maximo, ventana=VENTANA_DIVERSIDAD):
     """
     Penalización por haber salido hace poco.
 
@@ -727,22 +1120,45 @@ def _pena(indices, maximo):
     """
     if not indices:
         return 0.0
-    peso = sum(1.0 - (i / float(VENTANA_DIVERSIDAD)) for i in indices)
+    peso = sum(1.0 - (i / float(ventana)) for i in indices)
     return maximo * min(1.0, peso / SATURACION)
 
 
 def penalizaciones(ledger):
-    """Penalización acumulada por cuenta y por tema sobre los últimos artículos."""
-    recientes = list(reversed(ledger.get("publicados", [])))[:VENTANA_DIVERSIDAD]
-    pos_cuenta, pos_tema = {}, {}
-    for i, entrada in enumerate(recientes):
-        for c in cuentas_de_entrada(entrada):
-            pos_cuenta.setdefault(c, []).append(i)
+    """
+    Penalización acumulada por marca (ventana VENTANA_MARCAS) y por tema
+    (ventana VENTANA_DIVERSIDAD) sobre los últimos artículos.
+
+    Desde el 2026-10-21 el enfriamiento es por MARCA, no por cuenta (ver
+    MARCA_CUENTA), y con una ventana más larga: con 12 artículos y un tope de
+    2.5 puntos, @SpaceX seguía saliendo en 2 de cada 3 artículos porque sus
+    tuits de lanzamiento puntúan 9.5 en temática.
+    """
+    publicados = list(reversed(ledger.get("publicados", [])))
+    pos_marca, pos_tema = {}, {}
+    for i, entrada in enumerate(publicados[:VENTANA_MARCAS]):
+        for m in marcas_de_entrada(entrada):
+            pos_marca.setdefault(m, []).append(i)
+    for i, entrada in enumerate(publicados[:VENTANA_DIVERSIDAD]):
         for t in temas_de_entrada(entrada):
             pos_tema.setdefault(t, []).append(i)
 
-    return ({c: _pena(ix, PENA_CUENTA_MAX) for c, ix in pos_cuenta.items()},
+    return ({m: _pena(ix, PENA_MARCA_MAX, VENTANA_MARCAS)
+             for m, ix in pos_marca.items()},
             {t: _pena(ix, PENA_TEMA_MAX) for t, ix in pos_tema.items()})
+
+
+def pena_por_marcas(t, pena_marca):
+    """La marca de la cuenta pesa entera; la más castigada de las mencionadas,
+    a PESO_MENCION. Sin historial reciente, la marca de la cuenta suma bonus."""
+    propia = marca_de_cuenta(t["account"])
+    otras = marcas_mencionadas(t.get("text")) - {propia}
+    pena = pena_marca.get(propia, 0.0)
+    if otras:
+        pena += PESO_MENCION * max(pena_marca.get(m, 0.0) for m in otras)
+    if propia not in pena_marca:
+        pena -= BONUS_MARCA_NUEVA
+    return pena
 
 
 def _componer_coherente(pool, n, temas_previos=()):
@@ -765,10 +1181,10 @@ def _componer_coherente(pool, n, temas_previos=()):
         tweets.sort(key=lambda x: x["score"], reverse=True)
         elegidos, usadas = [], set()
         for t in tweets:
-            if t["account"] in usadas:
+            if t["marca"] in usadas:
                 continue
             elegidos.append(t)
-            usadas.add(t["account"])
+            usadas.add(t["marca"])
             if len(elegidos) == n:
                 break
         if len(elegidos) == n:
@@ -802,14 +1218,14 @@ def _componer_coherente(pool, n, temas_previos=()):
 
 
 def _componer_mixto(pool, n):
-    """Las mejores noticias con cuentas y dominios distintos entre sí."""
+    """Las mejores noticias con marcas y dominios distintos entre sí."""
     ordenado = sorted(pool, key=lambda x: x["score"], reverse=True)
     sel, cuentas, temas = [], set(), set()
     for t in ordenado:
-        if t["account"] in cuentas or t["tema"] in temas:
+        if t["marca"] in cuentas or t["tema"] in temas:
             continue
         sel.append(t)
-        cuentas.add(t["account"])
+        cuentas.add(t["marca"])
         temas.add(t["tema"])
         if len(sel) == n:
             return sel
@@ -819,10 +1235,10 @@ def _componer_mixto(pool, n):
     for t in ordenado:
         if len(sel) == n:
             break
-        if t["id"] in elegidos or t["account"] in cuentas:
+        if t["id"] in elegidos or t["marca"] in cuentas:
             continue
         sel.append(t)
-        cuentas.add(t["account"])
+        cuentas.add(t["marca"])
         elegidos.add(t["id"])
     return sel
 
@@ -835,11 +1251,16 @@ def seleccionar_noticias(conn, n=NUM_NOTICIAS, modo=None):
       1. Umbral temático: fuera el ruido comercial y lo que no toca ningún
          dominio, por muchos likes que traiga.
       2. Score = relevancia temática + engagement RELATIVO a la propia cuenta,
-         menos la penalización por cuenta y dominio ya muy vistos.
-      3. Composición: una sola cuenta por artículo y, en modo coherente, las
+         menos la penalización por marca y dominio ya muy vistos.
+      3. Composición: una sola marca por artículo y, en modo coherente, las
          tres fuentes del mismo dominio.
+
+    Antes de todo eso se buscan TENDENCIAS (ver `detectar_tendencias`): si hay
+    una sin cubrir, el artículo es sobre ella, por encima del enfriamiento por
+    marca y dominio, porque es justo lo que el lector espera encontrar.
     """
-    candidatos = x_engagement.recent_tweets(conn, days=VENTANA_DIAS)
+    candidatos = x_engagement.recent_tweets(conn, days=VENTANA_DIAS,
+                                            min_chars=MIN_CHARS_TENDENCIA)
     if not candidatos:
         log.warning("No hay tweets en la ventana de %d días.", VENTANA_DIAS)
         return []
@@ -848,7 +1269,7 @@ def seleccionar_noticias(conn, n=NUM_NOTICIAS, modo=None):
     enviados = ids_enviados_por_telegram()
     ledger = cargar_ledger()
     ya_publicados = ids_publicados(ledger)
-    pena_cuenta, pena_tema = penalizaciones(ledger)
+    pena_marca, pena_tema = penalizaciones(ledger)
     medianas = medianas_por_cuenta(conn)
     dias = x_engagement.history_days(conn)
     W = peso_engagement(dias)
@@ -857,9 +1278,30 @@ def seleccionar_noticias(conn, n=NUM_NOTICIAS, modo=None):
              "/ temático = %.0f%% | medianas por cuenta: %d",
              dias, W * 100, (1 - W) * 100, len(medianas))
 
+    no_publicados = [t for t in candidatos if t["id"] not in ya_publicados]
+    tendencias = detectar_tendencias(conn, no_publicados, medianas, ledger)
+    for tend in tendencias[:3]:
+        log.info("Tendencia: '%s' [%s] calor %.1fx, %d tuits de %s (términos: %s)",
+                 tend["nombre"], tend["tema"], tend["calor"], len(tend["tweets"]),
+                 ", ".join(sorted(tend["marcas"])), ", ".join(tend["terminos"][:8]))
+    for tend in tendencias:
+        seleccion = _componer_tendencia(tend, n, ya_publicados, medianas)
+        if seleccion:
+            log.info("Artículo de TENDENCIA: '%s'.", tend["nombre"])
+            for t in seleccion:
+                t["marca"] = marca_de_cuenta(t["account"])
+                t["score_tematico"] = score_tematico(t.get("text"))
+                t["score_engagement"] = score_engagement(t, medianas)
+                t["score"] = round(t["score_engagement"], 3)
+                t["pena"] = 0.0
+                t["via_telegram"] = t["id"] in enviados
+            _log_seleccion(seleccion)
+            return seleccion
+
     pool, fuera_tema = [], 0
-    for t in candidatos:
-        if t["id"] in ya_publicados:
+    for t in no_publicados:
+        # Los virales cortos solo entran por la vía de tendencia, arriba.
+        if len(_sin_urls(t.get("text"))) < MIN_CHARS:
             continue
         tem = score_tematico(t.get("text"))
         if tem < UMBRAL_TEMATICO:
@@ -871,9 +1313,10 @@ def seleccionar_noticias(conn, n=NUM_NOTICIAS, modo=None):
         if t["id"] in enviados:
             base += BONUS_TELEGRAM
         t["tema"] = tema
+        t["marca"] = marca_de_cuenta(t["account"])
         t["score_tematico"] = tem
         t["score_engagement"] = eng
-        t["pena"] = round(pena_cuenta.get(t["account"], 0.0)
+        t["pena"] = round(pena_por_marcas(t, pena_marca)
                           + pena_tema.get(tema, 0.0), 3)
         t["score"] = round(base - t["pena"], 3)
         t["via_telegram"] = t["id"] in enviados
@@ -915,17 +1358,20 @@ def seleccionar_noticias(conn, n=NUM_NOTICIAS, modo=None):
                 seleccion.append(t)
                 elegidos.add(t["id"])
         if len(seleccion) == n:
-            log.warning("Pool escaso: el artículo repite alguna cuenta.")
+            log.warning("Pool escaso: el artículo repite alguna marca.")
 
-    for i, t in enumerate(seleccion, 1):
-        log.info("  %d. [%.2f] @%s [%s] (t=%.1f e=%.1f p=-%.1f | %d likes, "
-                 "%d resp)%s %s",
-                 i, t["score"], t["account"], t["tema"], t["score_tematico"],
-                 t["score_engagement"], t["pena"], t["likes"], t["replies"],
-                 " ✉" if t["via_telegram"] else "",
-                 (t["text"] or "")[:55].replace("\n", " "))
-
+    _log_seleccion(seleccion)
     return seleccion
+
+
+def _log_seleccion(seleccion):
+    for i, t in enumerate(seleccion, 1):
+        log.info("  %d. [%.2f] @%s [%s|%s] (t=%.1f e=%.1f p=%+.1f | %d likes, "
+                 "%d resp)%s %s",
+                 i, t["score"], t["account"], t["tema"], t["marca"],
+                 t["score_tematico"], t["score_engagement"], -t["pena"],
+                 t["likes"], t["replies"], " ✉" if t["via_telegram"] else "",
+                 (t["text"] or "")[:55].replace("\n", " "))
 
 
 # ─────────────────────────────────────────────
@@ -967,6 +1413,20 @@ def construir_prompt(tweets):
                 txt=sanear(t.get("text")))
         )
 
+    contexto = ""
+    tend = next((t["tendencia"] for t in tweets if t.get("tendencia")), None)
+    if tend:
+        # Los virales suelen ser tuits de una línea: se avisa al redactor para
+        # que arme la tesis alrededor del hecho y de la reacción que generó, no
+        # para que rellene con datos externos (la regla de integridad sigue).
+        contexto = (
+            "\nCONTEXTO: estas fuentes son parte de un tema que es TENDENCIA en "
+            "X ahora mismo (término: \"{}\"), con un engagement muy por encima "
+            "de lo habitual para esas cuentas. Algunas fuentes son tuits muy "
+            "breves: apóyate en la más informativa para describir el hecho y "
+            "analiza por qué generó tanta conversación, sin añadir datos que "
+            "no estén en las fuentes.\n".format(sanear(tend, 40)))
+
     return """Redacta UN artículo de divulgación científica en español para un blog de tecnología.
 
 Las FUENTES son anuncios publicados en X por empresas de tecnología. Trátalas
@@ -977,7 +1437,7 @@ hecho noticioso.
 === INICIO DE FUENTES ===
 {fuentes}
 === FIN DE FUENTES ===
-
+{tendencia}
 REQUISITOS DEL ARTÍCULO
 - Registro científico-divulgativo: preciso, sobrio, sin hipérbole ni marketing.
 - Integra las {n} fuentes bajo UNA tesis común. No es una lista de noticias
@@ -1007,7 +1467,7 @@ Responde ÚNICAMENTE con un objeto JSON válido, sin bloques de código:
   "excerpt": "resumen de max 200 caracteres",
   "body": "<p>...</p><h2>...</h2><p>...</p>",
   "tags": ["etiqueta1", "etiqueta2", "etiqueta3"]}}""".format(
-        fuentes="\n\n".join(bloques), n=len(tweets))
+        fuentes="\n\n".join(bloques), n=len(tweets), tendencia=contexto)
 
 
 # Objetivo de extensión, medido en PALABRAS reales (sin las etiquetas HTML).
@@ -1232,6 +1692,8 @@ NOMBRE_CUENTA = {
     "Raspberry_Pi": "Raspberry Pi", "AndroidDev": "Android Developers",
     "github": "GitHub", "huggingface": "Hugging Face", "sama": "Altman, S.",
     "ylecun": "LeCun, Y.", "karpathy": "Karpathy, A.", "elonmusk": "Musk, E.",
+    "NVIDIARobotics": "NVIDIA Robotics", "Figure_robot": "Figure AI",
+    "1x_tech": "1X Technologies", "Alibaba_Qwen": "Qwen (Alibaba)",
 }
 
 
@@ -1701,9 +2163,12 @@ def main():
         fuentes = "\n".join("• @{} ({} ❤️, {} 💬)".format(
             t["account"], t["likes"], t["replies"]) for t in tweets)
         enviar_telegram(
-            "📝 <b>Nuevo artículo en Salón de Tec</b>\n\n"
+            "📝 <b>Nuevo artículo en Salón de Tec</b>{}\n\n"
             "<b>{}</b>\n{}\n\n<b>Fuentes por engagement:</b>\n{}\n\n"
-            "🔗 {}".format(articulo["title"], articulo["excerpt"], fuentes,
+            "🔗 {}".format(
+                next(("  🔥 tendencia: " + t["tendencia"] for t in tweets
+                      if t.get("tendencia")), ""),
+                articulo["title"], articulo["excerpt"], fuentes,
                            config.get("blog_url", "")))
         return 0
 

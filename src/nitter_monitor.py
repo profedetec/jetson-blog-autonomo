@@ -56,7 +56,6 @@ X_ACCOUNTS = [
     "GoogleAI",
     "GeminiApp",
     "AIatMeta",       # Meta AI (verificado, antes era @MetaAI)
-    "deepseek_ai",    # DeepSeek (handle real; @DeepSeekAI no tiene timeline)
     "Kimi_Moonshot",  # Kimi / Moonshot AI (handle real; @moonshot_ai no tiene timeline)
     "Grok",           # xAI Grok (verificado)
     # ── Hardware y Chips ──
@@ -89,14 +88,13 @@ X_ACCOUNTS = [
     "Adobe",
     # ── Plataformas y OS ──
     "AndroidDev",    # Android (verificado)
-    "Linux",
     "github",
     # ── Influencers clave (IA) ──
-    "sama",           # Sam Altman
-    "ylecun",         # Yann LeCun
-    "karpathy",       # Andrej Karpathy
+    # Retiradas el 2026-10-21: @sama, @ylecun, @karpathy, @huggingface,
+    # @deepseek_ai y @Linux. La sindicación devuelve para ellas una caché
+    # congelada (~100 tuits, el más reciente de 2025 o antes): gastaban una
+    # petición por ciclo sin aportar nada y sumaban 429.
     "elonmusk",
-    "huggingface",
     # ── Criptomonedas y finanzas (fuentes serias) ──
     "glassnode",      # Analítica on-chain, 100% cripto (fuente oficial)
     "CoinDesk",       # Medio de referencia (fuente oficial)
@@ -117,6 +115,12 @@ X_ACCOUNTS = [
     "MicronTech",
     "perplexity_ai",
     "cohere",
+    # Sumadas el 2026-10-21 (verificadas con timeline vivo): robótica humanoide
+    # e IA fuera del grupo de siempre.
+    "Figure_robot",
+    "1x_tech",
+    "NVIDIARobotics",
+    "Alibaba_Qwen",
 ]
 
 # Cuentas que solo alimentan la base de engagement del blog, sin alertas a
@@ -127,7 +131,8 @@ X_ACCOUNTS = [
 BLOG_ONLY_ACCOUNTS = {
     "NASA", "esa", "NASAJPL", "RocketLab", "BostonDynamics", "Waymo", "NIH",
     "ENERGY", "IEA", "CISAgov", "Cloudflare", "Arm", "MicronTech",
-    "perplexity_ai", "cohere",
+    "perplexity_ai", "cohere", "Figure_robot", "1x_tech", "NVIDIARobotics",
+    "Alibaba_Qwen",
 }
 
 # Cuentas de influencers/personas (solo alertan si hay keyword match)
