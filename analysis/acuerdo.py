@@ -51,3 +51,8 @@ for nombre, cats, g in (("6 etiquetas", ETQ, lambda e: e), ("3 grupos", ["OK", "
     k_ic = ic([kappa(par(m)) for m in muestras]); a_ic = ic([ac1(par(m), cats) for m in muestras])
     print("  %-11s acuerdo %.1f %% | kappa %.3f [%.3f, %.3f] | AC1 %.3f [%.3f, %.3f] | PABAK %.3f"
           % (nombre, 100 * po, kappa(p), k_ic[0], k_ic[1], ac1(p, cats), a_ic[0], a_ic[1], (q * po - 1) / (q - 1)))
+
+# Acuerdo sobre la clase "error" (D+C+EI), etiquetas ciegas
+eA = sum(GRUPO[x] == "ERR" for _, x, _ in filas); eB = sum(GRUPO[y] == "ERR" for _, _, y in filas)
+ambos = sum(GRUPO[x] == "ERR" and GRUPO[y] == "ERR" for _, x, y in filas)
+print("  errores: A %d, B %d, ambos %d | acuerdo positivo %.2f" % (eA, eB, ambos, 2 * ambos / (eA + eB)))

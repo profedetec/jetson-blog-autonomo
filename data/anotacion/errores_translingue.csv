@@ -1,0 +1,13 @@
+article,claim,label,source_expression,article_rendering,cross_lingual,rationale
+A01,1,D,"by over 20%","20 %",hedge-dropped,"Spanish has a direct equivalent (más del 20 %); not forced by translation"
+A02,9,EI,"Vera Rubin (NVIDIA platform)","hardware for astronomy",no,"world-knowledge error"
+A04,15,D,"Vera Rubin NVL72","NVL42",no,"model number changed; language-independent"
+A07,2,D,"New Fellows Research:","programa 'New Fellows Research'",yes,"English headline word 'New' absorbed into a Spanish proper name"
+A09,12,D,"9.3 million SOL","9.3 millones de dólares",no,"unit changed; language-independent"
+A13,10,D,"video credit","colaboración",no,"over-interpretation of thin source"
+A19,1,D,"posts by @CoinDesk mentioning Grayscale","publicados por @CoinDesk y @Grayscale",no,"misattribution"
+A20,2,D,"90%+ of my miles","90 % de sus trayectos",yes,"lexical rendering of 'miles' as trips"
+A23,3,D,"product update","capacidades agénticas",no,"over-interpretation"
+A26,2,D,"stages only paths still marked as conflicted","omits restriction",no,"technical restriction dropped"
+A28,3,D,"~8:34","a las 8:34",hedge-dropped,"Spanish has a direct equivalent (hacia las 8:34); not forced by translation"
+A30,8,D,"Watch ...","un comunicado posterior confirmó",no,"over-interpretation"

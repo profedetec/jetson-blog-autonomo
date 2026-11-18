@@ -80,4 +80,5 @@ post=[r for r in cron if r['start']>=datetime(2026,8,26,12)]
 print('desde 26-ago 12h', collections.Counter(r['out'] for r in post))
 pre=[r for r in cron if r['start']<datetime(2026,8,26,12)]
 print('antes 26-ago 12h',len(pre),collections.Counter(r['out'] for r in pre))
+npub=sum(r['out']=='publicado' for r in cron); print('extremo a extremo: %d publicadas / %d franjas = %.1f %%'%(npub,len(slots),100*npub/len(slots)))
 w2=[r['words'] for r in pub if r['words'] and r['words']<800]; print('publicadas <800 palabras',len(w2))

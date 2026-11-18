@@ -8,7 +8,9 @@ un modelo de lenguaje y lo publica en un blog. Corre con `cron` en una NVIDIA
 Jetson Nano (2020, Python 3.6) y está en producción desde el 20 de agosto
 de 2026.
 
-Este repositorio acompaña un artículo académico en preparación. Es una copia
+Este repositorio acompaña el artículo *Unattended LLM Science-News Publishing on a
+Single-Board Computer: A Field Study* (15th Computing Conference 2027, Springer
+LNNS; aceptado). Es una copia
 saneada del sistema en producción: no contiene credenciales, claves de API ni
 datos personales.
 
@@ -39,6 +41,8 @@ cron (cada 30 min)
 | `src/publisher/` | Cliente del panel del blog (login, CSRF, imagen) |
 | `src/net-wait.sh` | Guardia de red para los jobs de cron |
 | `analysis/metricas_corridas.py` | Métricas de corridas a partir del log |
+| `analysis/acuerdo.py` | Exactitud factual y acuerdo entre anotadores |
+| `analysis/prueba_inyeccion.py` | Prueba, a nivel de filtro, del saneado de tuits contra inyección de instrucciones |
 
 ## Instalación
 
@@ -75,10 +79,13 @@ Ejemplo de `crontab`:
 | `data/anotacion/etiquetas_A_consenso.json` | Anotador A tras la adjudicación (1 cambio: A28 #3) |
 | `data/anotacion/etiquetas_B.csv` | Anotador B (autor), 10 artículos, sin ver las etiquetas de A |
 | `data/anotacion/adjudicacion.md` | Desacuerdos y decisión de consenso |
+| `data/anotacion/errores_translingue.csv` | Clasificación de los 12 errores según si pueden deberse a la traducción inglés→español |
+| `data/seguridad/prueba_inyeccion.json` | Resultado de la prueba de inyección (20 cargas) |
 
 ```bash
 python3 analysis/metricas_corridas.py data/operacion/blog_cron.log   # tablas de operación y latencia
 python3 analysis/acuerdo.py                                         # exactitud y acuerdo entre anotadores
+python3 analysis/prueba_inyeccion.py                                # prueba del saneado contra inyección
 ```
 
 `metricas_corridas.py` acepta un segundo argumento con otro corte (`'AAAA-MM-DD HH:MM'`).
@@ -99,12 +106,13 @@ MIT. Ver [LICENSE](LICENSE).
 
 ## Cómo citar
 
-Galicia Guajardo, S. I. (2026). *jetson-blog-autonomo: sistema autónomo de publicación de blog científico en una Jetson Nano* (Versión 1.1.1) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23353297
+Galicia Guajardo, S. I. (2026). *jetson-blog-autonomo: sistema autónomo de publicación de blog científico en una Jetson Nano* (Versión 1.2.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23353297
 
-El DOI [10.5281/zenodo.23353297](https://doi.org/10.5281/zenodo.23353297) apunta siempre a la última versión; la 1.1.1 es la que usa el artículo. Cada versión tiene además su propio DOI en Zenodo.
+El DOI [10.5281/zenodo.23353297](https://doi.org/10.5281/zenodo.23353297) apunta siempre a la última versión; la 1.2.0 es la que usa la versión final del artículo. Cada versión tiene además su propio DOI en Zenodo.
 
 ## Versiones
 
+- **1.2.0** (2026-11-18): versión final del artículo tras la revisión por pares. Nuevos `analysis/prueba_inyeccion.py` y `data/seguridad/prueba_inyeccion.json` (prueba del saneado: quita 10 de 16 marcadores estructurales, pero el texto de la instrucción sobrevive en 18 de 20 cargas); `data/anotacion/errores_translingue.csv`; `metricas_corridas.py` imprime la tasa de extremo a extremo (161/216 = 74.5 %) y `acuerdo.py` el acuerdo sobre la clase error (A 5, B 2, ambos 2; acuerdo positivo 0.57). El código del sistema no cambia.
 - **1.1.1** (2026-10-20): datos de anotación sin el correo del autor; scripts renombrados a `src/blog_auto.py` y `src/publisher/cms_publisher.py`; corrección del conteo de franjas de cron (216, no 215) en `analysis/metricas_corridas.py`; decisión del autor en `data/anotacion/adjudicacion.md`.
 - **1.1.0** (2026-10-16): datos congelados del artículo y scripts que regeneran sus tablas.
 - **1.0.0** (2026-10-14): primera versión pública.
